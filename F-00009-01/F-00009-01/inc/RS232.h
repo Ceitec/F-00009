@@ -18,6 +18,10 @@ void RS232_Receive_String( void );
 
 void RS232_Transmit_Char( unsigned char data );
 
+void RS232_Transmit_uint8( uint8_t data );
+
+void RS232_Transmit_uint16( uint16_t data );
+
 void RS232_Transmit_Char_CR(void);
 
 void RS232_Transmit_String(char* StringPtr);

@@ -5,7 +5,7 @@ Knihovna: RS232.c
 Vlastník: Lukáš Novák
 
 */
-#define F_CPU 16000000UL
+//#define F_CPU 14745600UL
 #include <util/delay.h>
 #include <avr/io.h>
 #include "RS232.h"
@@ -83,6 +83,22 @@ void RS232_Transmit_Char( unsigned char data )
   UDR0 = data;						//Nastavení znaku do registru
 }
 
+// UINT8_T Data
+void RS232_Transmit_uint8( uint8_t data )
+{
+	while ( !( UCSR0A & (1<<UDRE0)) );	//Èekání dokud není prázdný buffer
+	UDR0 = data;						//Nastavení znaku do registru
+}
+
+// UINT16_T Data
+void RS232_Transmit_uint16( uint16_t data )
+{
+	RS232_Transmit_uint8( data >> 8 );
+	RS232_Transmit_uint8( data );
+}
+
+
+// Odešle se pouze CR
 void RS232_Transmit_Char_CR(void)
 {
 	while ( !( UCSR0A & (1<<UDRE0)) );	//Èekání dokud není prázdný buffer

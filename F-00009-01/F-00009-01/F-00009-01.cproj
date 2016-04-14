@@ -42,15 +42,18 @@
     <avrtoolserialnumber />
     <avrdeviceexpectedsignature>0x1E960A</avrdeviceexpectedsignature>
     <com_atmel_avrdbg_tool_simulator>
-      <ToolOptions xmlns="">
+      <ToolOptions>
         <InterfaceProperties>
         </InterfaceProperties>
+        <InterfaceName>
+        </InterfaceName>
       </ToolOptions>
-      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
-      <ToolNumber xmlns="">
+      <ToolType>com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber>
       </ToolNumber>
-      <ToolName xmlns="">Simulator</ToolName>
+      <ToolName>Simulator</ToolName>
     </com_atmel_avrdbg_tool_simulator>
+    <avrtoolinterface />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -117,7 +120,7 @@
   </avrgcc.linker.libraries.Libraries>
   <avrgcc.linker.memorysettings.Flash>
     <ListValues>
-      <Value>.text=0x3800</Value>
+      <Value>.text=0x7000</Value>
     </ListValues>
   </avrgcc.linker.memorysettings.Flash>
   <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
@@ -129,6 +132,15 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="inc\common_defs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\CRC_interface.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\CRC_interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\Define_Setup.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="inc\RS232.c">
