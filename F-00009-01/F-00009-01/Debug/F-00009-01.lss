@@ -3,31 +3,31 @@ F-00009-01.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000042  00800100  0000eb04  00000b98  2**0
+  0 .data         00000042  00800100  0000eb22  00000bb6  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         00000b04  0000e000  0000e000  00000094  2**1
+  1 .text         00000b22  0000e000  0000e000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .bss          00000103  00800142  00800142  00000bda  2**0
+  2 .bss          00000103  00800142  00800142  00000bf8  2**0
                   ALLOC
-  3 .comment      00000030  00000000  00000000  00000bda  2**0
+  3 .comment      00000030  00000000  00000000  00000bf8  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000c0c  2**2
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000c28  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 00000110  00000000  00000000  00000c4c  2**0
+  5 .debug_aranges 00000110  00000000  00000000  00000c68  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00000942  00000000  00000000  00000d5c  2**0
+  6 .debug_info   00000952  00000000  00000000  00000d78  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000378  00000000  00000000  0000169e  2**0
+  7 .debug_abbrev 0000036b  00000000  00000000  000016ca  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   000005bd  00000000  00000000  00001a16  2**0
+  8 .debug_line   000005c4  00000000  00000000  00001a35  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  0000037c  00000000  00000000  00001fd4  2**2
+  9 .debug_frame  0000037c  00000000  00000000  00001ffc  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    000003e1  00000000  00000000  00002350  2**0
+ 10 .debug_str    000003e1  00000000  00000000  00002378  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    0000070e  00000000  00000000  00002731  2**0
+ 11 .debug_loc    0000070e  00000000  00000000  00002759  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 000000e0  00000000  00000000  00002e3f  2**0
+ 12 .debug_ranges 000000e0  00000000  00000000  00002e67  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -64,56 +64,56 @@ Disassembly of section .text:
     e070:	0c 94 0d 71 	jmp	0xe21a	; 0xe21a <__bad_interrupt>
     e074:	0c 94 0d 71 	jmp	0xe21a	; 0xe21a <__bad_interrupt>
     e078:	0c 94 0d 71 	jmp	0xe21a	; 0xe21a <__bad_interrupt>
-    e07c:	ba 74       	andi	r27, 0x4A	; 74
-    e07e:	f4 73       	andi	r31, 0x34	; 52
-    e080:	f4 73       	andi	r31, 0x34	; 52
-    e082:	ae 74       	andi	r26, 0x4E	; 78
-    e084:	52 74       	andi	r21, 0x42	; 66
-    e086:	f4 73       	andi	r31, 0x34	; 52
-    e088:	f4 73       	andi	r31, 0x34	; 52
-    e08a:	f4 73       	andi	r31, 0x34	; 52
-    e08c:	f4 73       	andi	r31, 0x34	; 52
-    e08e:	f4 73       	andi	r31, 0x34	; 52
-    e090:	f4 73       	andi	r31, 0x34	; 52
-    e092:	f4 73       	andi	r31, 0x34	; 52
-    e094:	60 74       	andi	r22, 0x40	; 64
-    e096:	f4 73       	andi	r31, 0x34	; 52
-    e098:	f4 73       	andi	r31, 0x34	; 52
-    e09a:	6e 74       	andi	r22, 0x4E	; 78
-    e09c:	f4 73       	andi	r31, 0x34	; 52
-    e09e:	a0 74       	andi	r26, 0x40	; 64
-    e0a0:	f4 73       	andi	r31, 0x34	; 52
-    e0a2:	f4 73       	andi	r31, 0x34	; 52
-    e0a4:	a7 74       	andi	r26, 0x47	; 71
-    e0a6:	f4 73       	andi	r31, 0x34	; 52
-    e0a8:	f4 73       	andi	r31, 0x34	; 52
-    e0aa:	f4 73       	andi	r31, 0x34	; 52
-    e0ac:	f4 73       	andi	r31, 0x34	; 52
-    e0ae:	f4 73       	andi	r31, 0x34	; 52
-    e0b0:	f4 73       	andi	r31, 0x34	; 52
-    e0b2:	f4 73       	andi	r31, 0x34	; 52
-    e0b4:	f4 73       	andi	r31, 0x34	; 52
-    e0b6:	f4 73       	andi	r31, 0x34	; 52
-    e0b8:	f4 73       	andi	r31, 0x34	; 52
-    e0ba:	f4 73       	andi	r31, 0x34	; 52
-    e0bc:	b7 74       	andi	r27, 0x47	; 71
-    e0be:	f4 73       	andi	r31, 0x34	; 52
-    e0c0:	f4 73       	andi	r31, 0x34	; 52
-    e0c2:	19 74       	andi	r17, 0x49	; 73
-    e0c4:	f4 73       	andi	r31, 0x34	; 52
-    e0c6:	49 75       	andi	r20, 0x59	; 89
-    e0c8:	f4 73       	andi	r31, 0x34	; 52
-    e0ca:	f4 73       	andi	r31, 0x34	; 52
-    e0cc:	f4 73       	andi	r31, 0x34	; 52
-    e0ce:	f4 73       	andi	r31, 0x34	; 52
-    e0d0:	4a 74       	andi	r20, 0x4A	; 74
-    e0d2:	f4 73       	andi	r31, 0x34	; 52
-    e0d4:	f4 73       	andi	r31, 0x34	; 52
-    e0d6:	f4 73       	andi	r31, 0x34	; 52
-    e0d8:	f4 73       	andi	r31, 0x34	; 52
-    e0da:	f4 73       	andi	r31, 0x34	; 52
-    e0dc:	0b 74       	andi	r16, 0x4B	; 75
-    e0de:	7c 74       	andi	r23, 0x4C	; 76
+    e07c:	ae 74       	andi	r26, 0x4E	; 78
+    e07e:	e8 73       	andi	r30, 0x38	; 56
+    e080:	e8 73       	andi	r30, 0x38	; 56
+    e082:	a2 74       	andi	r26, 0x42	; 66
+    e084:	46 74       	andi	r20, 0x46	; 70
+    e086:	e8 73       	andi	r30, 0x38	; 56
+    e088:	e8 73       	andi	r30, 0x38	; 56
+    e08a:	e8 73       	andi	r30, 0x38	; 56
+    e08c:	e8 73       	andi	r30, 0x38	; 56
+    e08e:	e8 73       	andi	r30, 0x38	; 56
+    e090:	e8 73       	andi	r30, 0x38	; 56
+    e092:	e8 73       	andi	r30, 0x38	; 56
+    e094:	54 74       	andi	r21, 0x44	; 68
+    e096:	e8 73       	andi	r30, 0x38	; 56
+    e098:	e8 73       	andi	r30, 0x38	; 56
+    e09a:	62 74       	andi	r22, 0x42	; 66
+    e09c:	e8 73       	andi	r30, 0x38	; 56
+    e09e:	94 74       	andi	r25, 0x44	; 68
+    e0a0:	e8 73       	andi	r30, 0x38	; 56
+    e0a2:	e8 73       	andi	r30, 0x38	; 56
+    e0a4:	9b 74       	andi	r25, 0x4B	; 75
+    e0a6:	e8 73       	andi	r30, 0x38	; 56
+    e0a8:	e8 73       	andi	r30, 0x38	; 56
+    e0aa:	e8 73       	andi	r30, 0x38	; 56
+    e0ac:	e8 73       	andi	r30, 0x38	; 56
+    e0ae:	e8 73       	andi	r30, 0x38	; 56
+    e0b0:	e8 73       	andi	r30, 0x38	; 56
+    e0b2:	e8 73       	andi	r30, 0x38	; 56
+    e0b4:	e8 73       	andi	r30, 0x38	; 56
+    e0b6:	e8 73       	andi	r30, 0x38	; 56
+    e0b8:	e8 73       	andi	r30, 0x38	; 56
+    e0ba:	e8 73       	andi	r30, 0x38	; 56
+    e0bc:	ab 74       	andi	r26, 0x4B	; 75
+    e0be:	e8 73       	andi	r30, 0x38	; 56
+    e0c0:	e8 73       	andi	r30, 0x38	; 56
+    e0c2:	0d 74       	andi	r16, 0x4D	; 77
+    e0c4:	e8 73       	andi	r30, 0x38	; 56
+    e0c6:	3d 75       	andi	r19, 0x5D	; 93
+    e0c8:	e8 73       	andi	r30, 0x38	; 56
+    e0ca:	e8 73       	andi	r30, 0x38	; 56
+    e0cc:	e8 73       	andi	r30, 0x38	; 56
+    e0ce:	e8 73       	andi	r30, 0x38	; 56
+    e0d0:	3e 74       	andi	r19, 0x4E	; 78
+    e0d2:	e8 73       	andi	r30, 0x38	; 56
+    e0d4:	e8 73       	andi	r30, 0x38	; 56
+    e0d6:	e8 73       	andi	r30, 0x38	; 56
+    e0d8:	e8 73       	andi	r30, 0x38	; 56
+    e0da:	e8 73       	andi	r30, 0x38	; 56
+    e0dc:	ff 73       	andi	r31, 0x3F	; 63
+    e0de:	70 74       	andi	r23, 0x40	; 64
 
 0000e0e0 <__trampolines_end>:
     e0e0:	00 80       	ld	r0, Z
@@ -208,7 +208,7 @@ Disassembly of section .text:
     e192:	21 a1       	ldd	r18, Z+33	; 0x21
     e194:	0f 8f       	std	Y+31, r16	; 0x1f
     e196:	98 18       	sub	r9, r8
-    e198:	53 d3       	rcall	.+1702   	; 0xe840 <main+0x80>
+    e198:	53 d3       	rcall	.+1702   	; 0xe840 <main+0x9a>
     e19a:	c4 44       	sbci	r28, 0x44	; 68
     e19c:	ea 6a       	ori	r30, 0xAA	; 170
     e19e:	7d fd       	.word	0xfd7d	; ????
@@ -216,13 +216,13 @@ Disassembly of section .text:
     e1a2:	25 a5       	ldd	r18, Z+45	; 0x2d
     e1a4:	0b 8b       	std	Y+19, r16	; 0x13
     e1a6:	9c 1c       	adc	r9, r12
-    e1a8:	57 d7       	rcall	.+3758   	; 0xf058 <__data_load_end+0x512>
+    e1a8:	57 d7       	rcall	.+3758   	; 0xf058 <__data_load_end+0x4f4>
     e1aa:	c0 40       	sbci	r28, 0x00	; 0
     e1ac:	ee 6e       	ori	r30, 0xEE	; 238
     e1ae:	79 f9       	.word	0xf979	; ????
     e1b0:	ef 6f       	ori	r30, 0xFF	; 255
     e1b2:	78 f8       	.word	0xf878	; ????
-    e1b4:	56 d6       	rcall	.+3244   	; 0xee62 <__data_load_end+0x31c>
+    e1b4:	56 d6       	rcall	.+3244   	; 0xee62 <__data_load_end+0x2fe>
     e1b6:	c1 41       	sbci	r28, 0x11	; 17
     e1b8:	0a 8a       	std	Y+18, r0	; 0x12
     e1ba:	9d 1d       	adc	r25, r13
@@ -234,9 +234,9 @@ Disassembly of section .text:
     e1c6:	26 a6       	std	Z+46, r2	; 0x2e
     e1c8:	ed 6d       	ori	r30, 0xDD	; 221
     e1ca:	7a fa       	.word	0xfa7a	; ????
-    e1cc:	54 d4       	rcall	.+2216   	; 0xea76 <main+0x2b6>
+    e1cc:	54 d4       	rcall	.+2216   	; 0xea76 <main+0x2d0>
     e1ce:	c3 43       	sbci	r28, 0x33	; 51
-    e1d0:	55 d5       	rcall	.+2730   	; 0xec7c <__data_load_end+0x136>
+    e1d0:	55 d5       	rcall	.+2730   	; 0xec7c <__data_load_end+0x118>
     e1d2:	c2 42       	sbci	r28, 0x22	; 34
     e1d4:	ec 6c       	ori	r30, 0xCC	; 204
     e1d6:	7b fb       	.word	0xfb7b	; ????
@@ -257,7 +257,7 @@ Disassembly of section .text:
     e1ec:	11 e0       	ldi	r17, 0x01	; 1
     e1ee:	a0 e0       	ldi	r26, 0x00	; 0
     e1f0:	b1 e0       	ldi	r27, 0x01	; 1
-    e1f2:	e4 e0       	ldi	r30, 0x04	; 4
+    e1f2:	e2 e2       	ldi	r30, 0x22	; 34
     e1f4:	fb ee       	ldi	r31, 0xEB	; 235
     e1f6:	02 c0       	rjmp	.+4      	; 0xe1fc <__do_copy_data+0x10>
     e1f8:	05 90       	lpm	r0, Z+
@@ -279,8 +279,8 @@ Disassembly of section .text:
     e20c:	a5 34       	cpi	r26, 0x45	; 69
     e20e:	b2 07       	cpc	r27, r18
     e210:	e1 f7       	brne	.-8      	; 0xe20a <.do_clear_bss_loop>
-    e212:	0e 94 e0 73 	call	0xe7c0	; 0xe7c0 <main>
-    e216:	0c 94 80 75 	jmp	0xeb00	; 0xeb00 <_exit>
+    e212:	0e 94 d3 73 	call	0xe7a6	; 0xe7a6 <main>
+    e216:	0c 94 8f 75 	jmp	0xeb1e	; 0xeb1e <_exit>
 
 0000e21a <__bad_interrupt>:
     e21a:	0c 94 00 70 	jmp	0xe000	; 0xe000 <__vectors>
@@ -800,7 +800,7 @@ void EepromErase(void)
 		if(eeprom_read_byte(address) != 0xFF)
     e4c0:	89 81       	ldd	r24, Y+1	; 0x01
     e4c2:	9a 81       	ldd	r25, Y+2	; 0x02
-    e4c4:	0e 94 66 75 	call	0xeacc	; 0xeacc <eeprom_read_byte>
+    e4c4:	0e 94 75 75 	call	0xeaea	; 0xeaea <eeprom_read_byte>
     e4c8:	8f 3f       	cpi	r24, 0xFF	; 255
     e4ca:	29 f0       	breq	.+10     	; 0xe4d6 <EepromErase+0x34>
 		{
@@ -808,7 +808,7 @@ void EepromErase(void)
     e4cc:	89 81       	ldd	r24, Y+1	; 0x01
     e4ce:	9a 81       	ldd	r25, Y+2	; 0x02
     e4d0:	6f ef       	ldi	r22, 0xFF	; 255
-    e4d2:	0e 94 6e 75 	call	0xeadc	; 0xeadc <eeprom_update_byte>
+    e4d2:	0e 94 7d 75 	call	0xeafa	; 0xeafa <eeprom_update_byte>
 		}
 		address++;
     e4d6:	89 81       	ldd	r24, Y+1	; 0x01
@@ -1037,7 +1037,7 @@ void WriteEepromPages(uint16_t address, uint8_t *Buffer)
     e614:	3c 83       	std	Y+4, r19	; 0x04
     e616:	2b 83       	std	Y+3, r18	; 0x03
     e618:	64 2f       	mov	r22, r20
-    e61a:	0e 94 6e 75 	call	0xeadc	; 0xeadc <eeprom_update_byte>
+    e61a:	0e 94 7d 75 	call	0xeafa	; 0xeafa <eeprom_update_byte>
 
 // Z·pis po pages do pamÏti EEPROM
 void WriteEepromPages(uint16_t address, uint8_t *Buffer)
@@ -1072,7 +1072,7 @@ void WriteEepromPages(uint16_t address, uint8_t *Buffer)
 0000e642 <ReadFlashPages>:
 
 // »tenÌ pamÏti Flash
-void ReadFlashPages(uint8_t end)
+void ReadFlashPages(uint8_t end, uint16_t address)
 {
     e642:	cf 93       	push	r28
     e644:	df 93       	push	r29
@@ -1084,815 +1084,842 @@ void ReadFlashPages(uint8_t end)
     e650:	de bf       	out	0x3e, r29	; 62
     e652:	0f be       	out	0x3f, r0	; 63
     e654:	cd bf       	out	0x3d, r28	; 61
-    e656:	8c 87       	std	Y+12, r24	; 0x0c
-	uint16_t First=0x0000, Last=0x0000, address=0x0000;
-    e658:	1a 82       	std	Y+2, r1	; 0x02
-    e65a:	19 82       	std	Y+1, r1	; 0x01
+    e656:	8a 87       	std	Y+10, r24	; 0x0a
+    e658:	7c 87       	std	Y+12, r23	; 0x0c
+    e65a:	6b 87       	std	Y+11, r22	; 0x0b
+	uint16_t First=0x0000, Last=0x0000;
     e65c:	1c 82       	std	Y+4, r1	; 0x04
     e65e:	1b 82       	std	Y+3, r1	; 0x03
-    e660:	1e 82       	std	Y+6, r1	; 0x06
-    e662:	1d 82       	std	Y+5, r1	; 0x05
+    e660:	1a 82       	std	Y+2, r1	; 0x02
+    e662:	19 82       	std	Y+1, r1	; 0x01
 	uint16_t n=0;
-    e664:	18 86       	std	Y+8, r1	; 0x08
-    e666:	1f 82       	std	Y+7, r1	; 0x07
+    e664:	1e 82       	std	Y+6, r1	; 0x06
+    e666:	1d 82       	std	Y+5, r1	; 0x05
 	
 	// Konec 0 - 0x0000 aû konec aplikaËnÌ Ë·sti
 	// Konec 1 - ZaË·tek Bootloader Ë·sti aû konec
 	// Konec 2 - Cel· pamÏù
 	
 	if (end == 0)
-    e668:	8c 85       	ldd	r24, Y+12	; 0x0c
+    e668:	8a 85       	ldd	r24, Y+10	; 0x0a
     e66a:	88 23       	and	r24, r24
-    e66c:	39 f4       	brne	.+14     	; 0xe67c <ReadFlashPages+0x3a>
+    e66c:	31 f4       	brne	.+12     	; 0xe67a <ReadFlashPages+0x38>
 	{
-		First = START_APP_ADDRESS;
-    e66e:	1a 82       	std	Y+2, r1	; 0x02
-    e670:	19 82       	std	Y+1, r1	; 0x01
+		address = START_APP_ADDRESS;
+    e66e:	1c 86       	std	Y+12, r1	; 0x0c
+    e670:	1b 86       	std	Y+11, r1	; 0x0b
 		Last = END_APP_ADDRESS;
     e672:	8f ef       	ldi	r24, 0xFF	; 255
     e674:	9f e6       	ldi	r25, 0x6F	; 111
-    e676:	9c 83       	std	Y+4, r25	; 0x04
-    e678:	8b 83       	std	Y+3, r24	; 0x03
-    e67a:	1c c0       	rjmp	.+56     	; 0xe6b4 <ReadFlashPages+0x72>
+    e676:	9a 83       	std	Y+2, r25	; 0x02
+    e678:	89 83       	std	Y+1, r24	; 0x01
 	}
-	else if (end == 1)
-    e67c:	8c 85       	ldd	r24, Y+12	; 0x0c
-    e67e:	81 30       	cpi	r24, 0x01	; 1
-    e680:	49 f4       	brne	.+18     	; 0xe694 <ReadFlashPages+0x52>
-	{
-		First = START_BOOT_ADDRESS;
-    e682:	80 e0       	ldi	r24, 0x00	; 0
-    e684:	90 e7       	ldi	r25, 0x70	; 112
-    e686:	9a 83       	std	Y+2, r25	; 0x02
-    e688:	89 83       	std	Y+1, r24	; 0x01
-		Last = END_ADDRESS;
-    e68a:	8f ef       	ldi	r24, 0xFF	; 255
-    e68c:	9f e7       	ldi	r25, 0x7F	; 127
-    e68e:	9c 83       	std	Y+4, r25	; 0x04
-    e690:	8b 83       	std	Y+3, r24	; 0x03
-    e692:	10 c0       	rjmp	.+32     	; 0xe6b4 <ReadFlashPages+0x72>
-	}
-	else if(end == 2)
-    e694:	8c 85       	ldd	r24, Y+12	; 0x0c
-    e696:	82 30       	cpi	r24, 0x02	; 2
-    e698:	39 f4       	brne	.+14     	; 0xe6a8 <ReadFlashPages+0x66>
-	{
-		First = START_APP_ADDRESS;
-    e69a:	1a 82       	std	Y+2, r1	; 0x02
-    e69c:	19 82       	std	Y+1, r1	; 0x01
-		Last = END_ADDRESS;
-    e69e:	8f ef       	ldi	r24, 0xFF	; 255
-    e6a0:	9f e7       	ldi	r25, 0x7F	; 127
-    e6a2:	9c 83       	std	Y+4, r25	; 0x04
-    e6a4:	8b 83       	std	Y+3, r24	; 0x03
-    e6a6:	06 c0       	rjmp	.+12     	; 0xe6b4 <ReadFlashPages+0x72>
-	}
-	else
-	{
-		First = START_APP_ADDRESS;
-    e6a8:	1a 82       	std	Y+2, r1	; 0x02
-    e6aa:	19 82       	std	Y+1, r1	; 0x01
-		Last = END_APP_ADDRESS;
-    e6ac:	8f ef       	ldi	r24, 0xFF	; 255
-    e6ae:	9f e6       	ldi	r25, 0x6F	; 111
-    e6b0:	9c 83       	std	Y+4, r25	; 0x04
-    e6b2:	8b 83       	std	Y+3, r24	; 0x03
-	}
-	// Odesl·nÌ poËet Byt˘ kolik bude muset celkovÏ p¯ijmout
-	n = FLASH / NUM_O_PAGES;
-    e6b4:	80 e0       	ldi	r24, 0x00	; 0
-    e6b6:	91 e0       	ldi	r25, 0x01	; 1
-    e6b8:	98 87       	std	Y+8, r25	; 0x08
-    e6ba:	8f 83       	std	Y+7, r24	; 0x07
-	RS232_Transmit_uint16(n);
-    e6bc:	8f 81       	ldd	r24, Y+7	; 0x07
-    e6be:	98 85       	ldd	r25, Y+8	; 0x08
-    e6c0:	0e 94 cb 71 	call	0xe396	; 0xe396 <RS232_Transmit_uint16>
-	address = First;
-    e6c4:	89 81       	ldd	r24, Y+1	; 0x01
-    e6c6:	9a 81       	ldd	r25, Y+2	; 0x02
-    e6c8:	9e 83       	std	Y+6, r25	; 0x06
-    e6ca:	8d 83       	std	Y+5, r24	; 0x05
-	while (address > Last)
-    e6cc:	2d 81       	ldd	r18, Y+5	; 0x05
-    e6ce:	3e 81       	ldd	r19, Y+6	; 0x06
-    e6d0:	8b 81       	ldd	r24, Y+3	; 0x03
-    e6d2:	9c 81       	ldd	r25, Y+4	; 0x04
-    e6d4:	82 17       	cp	r24, r18
-    e6d6:	93 07       	cpc	r25, r19
-    e6d8:	f0 f4       	brcc	.+60     	; 0xe716 <ReadFlashPages+0xd4>
-	{
-		RS232_Transmit_uint16(address);
-    e6da:	8d 81       	ldd	r24, Y+5	; 0x05
-    e6dc:	9e 81       	ldd	r25, Y+6	; 0x06
-    e6de:	0e 94 cb 71 	call	0xe396	; 0xe396 <RS232_Transmit_uint16>
-		for ( i = 0; i < SPM_PAGESIZE; i++)
-    e6e2:	10 92 44 02 	sts	0x0244, r1
-		{
-			RS232_Transmit_Char(pgm_read_byte(address + i));
-    e6e6:	80 91 44 02 	lds	r24, 0x0244
-    e6ea:	28 2f       	mov	r18, r24
-    e6ec:	30 e0       	ldi	r19, 0x00	; 0
-    e6ee:	8d 81       	ldd	r24, Y+5	; 0x05
-    e6f0:	9e 81       	ldd	r25, Y+6	; 0x06
-    e6f2:	82 0f       	add	r24, r18
-    e6f4:	93 1f       	adc	r25, r19
-    e6f6:	9a 87       	std	Y+10, r25	; 0x0a
-    e6f8:	89 87       	std	Y+9, r24	; 0x09
-    e6fa:	89 85       	ldd	r24, Y+9	; 0x09
-    e6fc:	9a 85       	ldd	r25, Y+10	; 0x0a
-    e6fe:	fc 01       	movw	r30, r24
-    e700:	84 91       	lpm	r24, Z
-    e702:	8b 87       	std	Y+11, r24	; 0x0b
-    e704:	8b 85       	ldd	r24, Y+11	; 0x0b
-    e706:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
-	RS232_Transmit_uint16(n);
-	address = First;
-	while (address > Last)
-	{
-		RS232_Transmit_uint16(address);
-		for ( i = 0; i < SPM_PAGESIZE; i++)
-    e70a:	80 91 44 02 	lds	r24, 0x0244
-    e70e:	8f 5f       	subi	r24, 0xFF	; 255
-    e710:	80 93 44 02 	sts	0x0244, r24
-		{
-			RS232_Transmit_Char(pgm_read_byte(address + i));
-		}
-    e714:	e8 cf       	rjmp	.-48     	; 0xe6e6 <ReadFlashPages+0xa4>
-		address += SPM_PAGESIZE;
-	}
-}
-    e716:	2c 96       	adiw	r28, 0x0c	; 12
-    e718:	0f b6       	in	r0, 0x3f	; 63
-    e71a:	f8 94       	cli
-    e71c:	de bf       	out	0x3e, r29	; 62
-    e71e:	0f be       	out	0x3f, r0	; 63
-    e720:	cd bf       	out	0x3d, r28	; 61
-    e722:	df 91       	pop	r29
-    e724:	cf 91       	pop	r28
-    e726:	08 95       	ret
-
-0000e728 <ReadEepromPages>:
-
-void ReadEepromPages(void)
-{
-    e728:	cf 93       	push	r28
-    e72a:	df 93       	push	r29
-    e72c:	cd b7       	in	r28, 0x3d	; 61
-    e72e:	de b7       	in	r29, 0x3e	; 62
-    e730:	2b 97       	sbiw	r28, 0x0b	; 11
-    e732:	0f b6       	in	r0, 0x3f	; 63
-    e734:	f8 94       	cli
-    e736:	de bf       	out	0x3e, r29	; 62
-    e738:	0f be       	out	0x3f, r0	; 63
-    e73a:	cd bf       	out	0x3d, r28	; 61
-	uint16_t First=0x0000, Last=0x0000, address=0x0000;
-    e73c:	1a 82       	std	Y+2, r1	; 0x02
-    e73e:	19 82       	std	Y+1, r1	; 0x01
-    e740:	1c 82       	std	Y+4, r1	; 0x04
-    e742:	1b 82       	std	Y+3, r1	; 0x03
-    e744:	1e 82       	std	Y+6, r1	; 0x06
-    e746:	1d 82       	std	Y+5, r1	; 0x05
-	uint16_t n=0;
-    e748:	18 86       	std	Y+8, r1	; 0x08
-    e74a:	1f 82       	std	Y+7, r1	; 0x07
 	
 	// Odesl·nÌ poËet Byt˘ kolik bude muset celkovÏ p¯ijmout
 	n = FLASH / NUM_O_PAGES;
-    e74c:	80 e0       	ldi	r24, 0x00	; 0
-    e74e:	91 e0       	ldi	r25, 0x01	; 1
-    e750:	98 87       	std	Y+8, r25	; 0x08
-    e752:	8f 83       	std	Y+7, r24	; 0x07
+    e67a:	80 e0       	ldi	r24, 0x00	; 0
+    e67c:	91 e0       	ldi	r25, 0x01	; 1
+    e67e:	9e 83       	std	Y+6, r25	; 0x06
+    e680:	8d 83       	std	Y+5, r24	; 0x05
 	RS232_Transmit_uint16(n);
-    e754:	8f 81       	ldd	r24, Y+7	; 0x07
-    e756:	98 85       	ldd	r25, Y+8	; 0x08
-    e758:	0e 94 cb 71 	call	0xe396	; 0xe396 <RS232_Transmit_uint16>
-	address = First;
-    e75c:	89 81       	ldd	r24, Y+1	; 0x01
-    e75e:	9a 81       	ldd	r25, Y+2	; 0x02
-    e760:	9e 83       	std	Y+6, r25	; 0x06
-    e762:	8d 83       	std	Y+5, r24	; 0x05
+    e682:	8d 81       	ldd	r24, Y+5	; 0x05
+    e684:	9e 81       	ldd	r25, Y+6	; 0x06
+    e686:	0e 94 cb 71 	call	0xe396	; 0xe396 <RS232_Transmit_uint16>
+	
 	while (address > Last)
-    e764:	2d 81       	ldd	r18, Y+5	; 0x05
-    e766:	3e 81       	ldd	r19, Y+6	; 0x06
-    e768:	8b 81       	ldd	r24, Y+3	; 0x03
-    e76a:	9c 81       	ldd	r25, Y+4	; 0x04
-    e76c:	82 17       	cp	r24, r18
-    e76e:	93 07       	cpc	r25, r19
-    e770:	f0 f4       	brcc	.+60     	; 0xe7ae <ReadEepromPages+0x86>
+    e68a:	2b 85       	ldd	r18, Y+11	; 0x0b
+    e68c:	3c 85       	ldd	r19, Y+12	; 0x0c
+    e68e:	89 81       	ldd	r24, Y+1	; 0x01
+    e690:	9a 81       	ldd	r25, Y+2	; 0x02
+    e692:	82 17       	cp	r24, r18
+    e694:	93 07       	cpc	r25, r19
+    e696:	f0 f4       	brcc	.+60     	; 0xe6d4 <ReadFlashPages+0x92>
 	{
 		RS232_Transmit_uint16(address);
-    e772:	8d 81       	ldd	r24, Y+5	; 0x05
-    e774:	9e 81       	ldd	r25, Y+6	; 0x06
-    e776:	0e 94 cb 71 	call	0xe396	; 0xe396 <RS232_Transmit_uint16>
+    e698:	8b 85       	ldd	r24, Y+11	; 0x0b
+    e69a:	9c 85       	ldd	r25, Y+12	; 0x0c
+    e69c:	0e 94 cb 71 	call	0xe396	; 0xe396 <RS232_Transmit_uint16>
 		for ( i = 0; i < SPM_PAGESIZE; i++)
-    e77a:	10 92 44 02 	sts	0x0244, r1
+    e6a0:	10 92 44 02 	sts	0x0244, r1
 		{
 			RS232_Transmit_Char(pgm_read_byte(address + i));
-    e77e:	80 91 44 02 	lds	r24, 0x0244
-    e782:	28 2f       	mov	r18, r24
-    e784:	30 e0       	ldi	r19, 0x00	; 0
-    e786:	8d 81       	ldd	r24, Y+5	; 0x05
-    e788:	9e 81       	ldd	r25, Y+6	; 0x06
-    e78a:	82 0f       	add	r24, r18
-    e78c:	93 1f       	adc	r25, r19
-    e78e:	9a 87       	std	Y+10, r25	; 0x0a
-    e790:	89 87       	std	Y+9, r24	; 0x09
-    e792:	89 85       	ldd	r24, Y+9	; 0x09
-    e794:	9a 85       	ldd	r25, Y+10	; 0x0a
-    e796:	fc 01       	movw	r30, r24
-    e798:	84 91       	lpm	r24, Z
-    e79a:	8b 87       	std	Y+11, r24	; 0x0b
-    e79c:	8b 85       	ldd	r24, Y+11	; 0x0b
-    e79e:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    e6a4:	80 91 44 02 	lds	r24, 0x0244
+    e6a8:	28 2f       	mov	r18, r24
+    e6aa:	30 e0       	ldi	r19, 0x00	; 0
+    e6ac:	8b 85       	ldd	r24, Y+11	; 0x0b
+    e6ae:	9c 85       	ldd	r25, Y+12	; 0x0c
+    e6b0:	82 0f       	add	r24, r18
+    e6b2:	93 1f       	adc	r25, r19
+    e6b4:	98 87       	std	Y+8, r25	; 0x08
+    e6b6:	8f 83       	std	Y+7, r24	; 0x07
+    e6b8:	8f 81       	ldd	r24, Y+7	; 0x07
+    e6ba:	98 85       	ldd	r25, Y+8	; 0x08
+    e6bc:	fc 01       	movw	r30, r24
+    e6be:	84 91       	lpm	r24, Z
+    e6c0:	89 87       	std	Y+9, r24	; 0x09
+    e6c2:	89 85       	ldd	r24, Y+9	; 0x09
+    e6c4:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 	RS232_Transmit_uint16(n);
-	address = First;
+	
 	while (address > Last)
 	{
 		RS232_Transmit_uint16(address);
 		for ( i = 0; i < SPM_PAGESIZE; i++)
-    e7a2:	80 91 44 02 	lds	r24, 0x0244
-    e7a6:	8f 5f       	subi	r24, 0xFF	; 255
-    e7a8:	80 93 44 02 	sts	0x0244, r24
+    e6c8:	80 91 44 02 	lds	r24, 0x0244
+    e6cc:	8f 5f       	subi	r24, 0xFF	; 255
+    e6ce:	80 93 44 02 	sts	0x0244, r24
 		{
 			RS232_Transmit_Char(pgm_read_byte(address + i));
 		}
-    e7ac:	e8 cf       	rjmp	.-48     	; 0xe77e <ReadEepromPages+0x56>
+    e6d2:	e8 cf       	rjmp	.-48     	; 0xe6a4 <ReadFlashPages+0x62>
+		{
+			break;
+		}
 		address += SPM_PAGESIZE;
 	}
 }
-    e7ae:	2b 96       	adiw	r28, 0x0b	; 11
-    e7b0:	0f b6       	in	r0, 0x3f	; 63
-    e7b2:	f8 94       	cli
-    e7b4:	de bf       	out	0x3e, r29	; 62
-    e7b6:	0f be       	out	0x3f, r0	; 63
-    e7b8:	cd bf       	out	0x3d, r28	; 61
-    e7ba:	df 91       	pop	r29
-    e7bc:	cf 91       	pop	r28
-    e7be:	08 95       	ret
+    e6d4:	2c 96       	adiw	r28, 0x0c	; 12
+    e6d6:	0f b6       	in	r0, 0x3f	; 63
+    e6d8:	f8 94       	cli
+    e6da:	de bf       	out	0x3e, r29	; 62
+    e6dc:	0f be       	out	0x3f, r0	; 63
+    e6de:	cd bf       	out	0x3d, r28	; 61
+    e6e0:	df 91       	pop	r29
+    e6e2:	cf 91       	pop	r28
+    e6e4:	08 95       	ret
 
-0000e7c0 <main>:
+0000e6e6 <ReadEepromPages>:
+
+void ReadEepromPages(uint8_t end, uint16_t address)
+{
+    e6e6:	cf 93       	push	r28
+    e6e8:	df 93       	push	r29
+    e6ea:	cd b7       	in	r28, 0x3d	; 61
+    e6ec:	de b7       	in	r29, 0x3e	; 62
+    e6ee:	2c 97       	sbiw	r28, 0x0c	; 12
+    e6f0:	0f b6       	in	r0, 0x3f	; 63
+    e6f2:	f8 94       	cli
+    e6f4:	de bf       	out	0x3e, r29	; 62
+    e6f6:	0f be       	out	0x3f, r0	; 63
+    e6f8:	cd bf       	out	0x3d, r28	; 61
+    e6fa:	8a 87       	std	Y+10, r24	; 0x0a
+    e6fc:	7c 87       	std	Y+12, r23	; 0x0c
+    e6fe:	6b 87       	std	Y+11, r22	; 0x0b
+	uint16_t First=0x0000, Last=0x0000;
+    e700:	1c 82       	std	Y+4, r1	; 0x04
+    e702:	1b 82       	std	Y+3, r1	; 0x03
+    e704:	1a 82       	std	Y+2, r1	; 0x02
+    e706:	19 82       	std	Y+1, r1	; 0x01
+	uint16_t n=0;
+    e708:	1e 82       	std	Y+6, r1	; 0x06
+    e70a:	1d 82       	std	Y+5, r1	; 0x05
+	
+	if (end == 0)
+    e70c:	8a 85       	ldd	r24, Y+10	; 0x0a
+    e70e:	88 23       	and	r24, r24
+    e710:	31 f4       	brne	.+12     	; 0xe71e <ReadEepromPages+0x38>
+	{
+		address = START_EEPROM_ADDRESS;
+    e712:	1c 86       	std	Y+12, r1	; 0x0c
+    e714:	1b 86       	std	Y+11, r1	; 0x0b
+		Last = END_EEPROM_ADDRESS;
+    e716:	80 e0       	ldi	r24, 0x00	; 0
+    e718:	98 e0       	ldi	r25, 0x08	; 8
+    e71a:	9a 83       	std	Y+2, r25	; 0x02
+    e71c:	89 83       	std	Y+1, r24	; 0x01
+	}
+	
+	
+	// Odesl·nÌ poËet Byt˘ kolik bude muset celkovÏ p¯ijmout
+	n = FLASH / NUM_O_PAGES;
+    e71e:	80 e0       	ldi	r24, 0x00	; 0
+    e720:	91 e0       	ldi	r25, 0x01	; 1
+    e722:	9e 83       	std	Y+6, r25	; 0x06
+    e724:	8d 83       	std	Y+5, r24	; 0x05
+	RS232_Transmit_uint16(n);
+    e726:	8d 81       	ldd	r24, Y+5	; 0x05
+    e728:	9e 81       	ldd	r25, Y+6	; 0x06
+    e72a:	0e 94 cb 71 	call	0xe396	; 0xe396 <RS232_Transmit_uint16>
+	
+	while (address > Last)
+    e72e:	2b c0       	rjmp	.+86     	; 0xe786 <ReadEepromPages+0xa0>
+	{
+		RS232_Transmit_uint16(address);
+    e730:	8b 85       	ldd	r24, Y+11	; 0x0b
+    e732:	9c 85       	ldd	r25, Y+12	; 0x0c
+    e734:	0e 94 cb 71 	call	0xe396	; 0xe396 <RS232_Transmit_uint16>
+		for ( i = 0; i < PAGE_SIZE_EEPROM; i++)
+    e738:	10 92 44 02 	sts	0x0244, r1
+    e73c:	17 c0       	rjmp	.+46     	; 0xe76c <ReadEepromPages+0x86>
+		{
+			RS232_Transmit_Char(pgm_read_byte(address + i));
+    e73e:	80 91 44 02 	lds	r24, 0x0244
+    e742:	28 2f       	mov	r18, r24
+    e744:	30 e0       	ldi	r19, 0x00	; 0
+    e746:	8b 85       	ldd	r24, Y+11	; 0x0b
+    e748:	9c 85       	ldd	r25, Y+12	; 0x0c
+    e74a:	82 0f       	add	r24, r18
+    e74c:	93 1f       	adc	r25, r19
+    e74e:	98 87       	std	Y+8, r25	; 0x08
+    e750:	8f 83       	std	Y+7, r24	; 0x07
+    e752:	8f 81       	ldd	r24, Y+7	; 0x07
+    e754:	98 85       	ldd	r25, Y+8	; 0x08
+    e756:	fc 01       	movw	r30, r24
+    e758:	84 91       	lpm	r24, Z
+    e75a:	89 87       	std	Y+9, r24	; 0x09
+    e75c:	89 85       	ldd	r24, Y+9	; 0x09
+    e75e:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+	RS232_Transmit_uint16(n);
+	
+	while (address > Last)
+	{
+		RS232_Transmit_uint16(address);
+		for ( i = 0; i < PAGE_SIZE_EEPROM; i++)
+    e762:	80 91 44 02 	lds	r24, 0x0244
+    e766:	8f 5f       	subi	r24, 0xFF	; 255
+    e768:	80 93 44 02 	sts	0x0244, r24
+    e76c:	80 91 44 02 	lds	r24, 0x0244
+    e770:	88 30       	cpi	r24, 0x08	; 8
+    e772:	28 f3       	brcs	.-54     	; 0xe73e <ReadEepromPages+0x58>
+		{
+			RS232_Transmit_Char(pgm_read_byte(address + i));
+		}
+		if (end == 1)
+    e774:	8a 85       	ldd	r24, Y+10	; 0x0a
+    e776:	81 30       	cpi	r24, 0x01	; 1
+    e778:	09 f4       	brne	.+2      	; 0xe77c <ReadEepromPages+0x96>
+		{
+			break;
+    e77a:	0c c0       	rjmp	.+24     	; 0xe794 <ReadEepromPages+0xae>
+		}
+		address += PAGE_SIZE_EEPROM;
+    e77c:	8b 85       	ldd	r24, Y+11	; 0x0b
+    e77e:	9c 85       	ldd	r25, Y+12	; 0x0c
+    e780:	08 96       	adiw	r24, 0x08	; 8
+    e782:	9c 87       	std	Y+12, r25	; 0x0c
+    e784:	8b 87       	std	Y+11, r24	; 0x0b
+	
+	// Odesl·nÌ poËet Byt˘ kolik bude muset celkovÏ p¯ijmout
+	n = FLASH / NUM_O_PAGES;
+	RS232_Transmit_uint16(n);
+	
+	while (address > Last)
+    e786:	2b 85       	ldd	r18, Y+11	; 0x0b
+    e788:	3c 85       	ldd	r19, Y+12	; 0x0c
+    e78a:	89 81       	ldd	r24, Y+1	; 0x01
+    e78c:	9a 81       	ldd	r25, Y+2	; 0x02
+    e78e:	82 17       	cp	r24, r18
+    e790:	93 07       	cpc	r25, r19
+    e792:	70 f2       	brcs	.-100    	; 0xe730 <ReadEepromPages+0x4a>
+		{
+			break;
+		}
+		address += PAGE_SIZE_EEPROM;
+	}
+}
+    e794:	2c 96       	adiw	r28, 0x0c	; 12
+    e796:	0f b6       	in	r0, 0x3f	; 63
+    e798:	f8 94       	cli
+    e79a:	de bf       	out	0x3e, r29	; 62
+    e79c:	0f be       	out	0x3f, r0	; 63
+    e79e:	cd bf       	out	0x3d, r28	; 61
+    e7a0:	df 91       	pop	r29
+    e7a2:	cf 91       	pop	r28
+    e7a4:	08 95       	ret
+
+0000e7a6 <main>:
 
 
 int main(void)
 {
-    e7c0:	0f 93       	push	r16
-    e7c2:	1f 93       	push	r17
-    e7c4:	cf 93       	push	r28
-    e7c6:	df 93       	push	r29
-    e7c8:	cd b7       	in	r28, 0x3d	; 61
-    e7ca:	de b7       	in	r29, 0x3e	; 62
-    e7cc:	2a 97       	sbiw	r28, 0x0a	; 10
-    e7ce:	0f b6       	in	r0, 0x3f	; 63
-    e7d0:	f8 94       	cli
-    e7d2:	de bf       	out	0x3e, r29	; 62
-    e7d4:	0f be       	out	0x3f, r0	; 63
-    e7d6:	cd bf       	out	0x3d, r28	; 61
+    e7a6:	0f 93       	push	r16
+    e7a8:	1f 93       	push	r17
+    e7aa:	cf 93       	push	r28
+    e7ac:	df 93       	push	r29
+    e7ae:	cd b7       	in	r28, 0x3d	; 61
+    e7b0:	de b7       	in	r29, 0x3e	; 62
+    e7b2:	2b 97       	sbiw	r28, 0x0b	; 11
+    e7b4:	0f b6       	in	r0, 0x3f	; 63
+    e7b6:	f8 94       	cli
+    e7b8:	de bf       	out	0x3e, r29	; 62
+    e7ba:	0f be       	out	0x3f, r0	; 63
+    e7bc:	cd bf       	out	0x3d, r28	; 61
 	
     /* Replace with your application code */
 
 	uint8_t ID_Data=0;
-    e7d8:	19 82       	std	Y+1, r1	; 0x01
+    e7be:	19 82       	std	Y+1, r1	; 0x01
 	uint16_t	address=0x0000;
-    e7da:	1b 82       	std	Y+3, r1	; 0x03
-    e7dc:	1a 82       	std	Y+2, r1	; 0x02
+    e7c0:	1b 82       	std	Y+3, r1	; 0x03
+    e7c2:	1a 82       	std	Y+2, r1	; 0x02
+	uint8_t	all=0x00;
+    e7c4:	1c 82       	std	Y+4, r1	; 0x04
 	
 	cli();
-    e7de:	f8 94       	cli
+    e7c6:	f8 94       	cli
 	RS232_Init(RS232_115200);
-    e7e0:	88 e0       	ldi	r24, 0x08	; 8
-    e7e2:	90 e0       	ldi	r25, 0x00	; 0
-    e7e4:	0e 94 5e 71 	call	0xe2bc	; 0xe2bc <RS232_Init>
+    e7c8:	88 e0       	ldi	r24, 0x08	; 8
+    e7ca:	90 e0       	ldi	r25, 0x00	; 0
+    e7cc:	0e 94 5e 71 	call	0xe2bc	; 0xe2bc <RS232_Init>
     while (1) 
     {
 		
 		//ID_Data = RS232_Receive_Char();
 		#warning "Pouze Simulator"
 		ID_Data = 'g';
-    e7e8:	87 e6       	ldi	r24, 0x67	; 103
-    e7ea:	89 83       	std	Y+1, r24	; 0x01
+    e7d0:	87 e6       	ldi	r24, 0x67	; 103
+    e7d2:	89 83       	std	Y+1, r24	; 0x01
 		
 		switch (ID_Data)
-    e7ec:	89 81       	ldd	r24, Y+1	; 0x01
-    e7ee:	88 2f       	mov	r24, r24
-    e7f0:	90 e0       	ldi	r25, 0x00	; 0
-    e7f2:	09 2e       	mov	r0, r25
-    e7f4:	00 0c       	add	r0, r0
-    e7f6:	aa 0b       	sbc	r26, r26
-    e7f8:	bb 0b       	sbc	r27, r27
-    e7fa:	42 e4       	ldi	r20, 0x42	; 66
-    e7fc:	50 e0       	ldi	r21, 0x00	; 0
-    e7fe:	21 e3       	ldi	r18, 0x31	; 49
-    e800:	30 e0       	ldi	r19, 0x00	; 0
-    e802:	84 1b       	sub	r24, r20
-    e804:	95 0b       	sbc	r25, r21
-    e806:	28 17       	cp	r18, r24
-    e808:	39 07       	cpc	r19, r25
-    e80a:	70 f3       	brcs	.-36     	; 0xe7e8 <main+0x28>
-    e80c:	82 5c       	subi	r24, 0xC2	; 194
-    e80e:	9f 48       	sbci	r25, 0x8F	; 143
-    e810:	fc 01       	movw	r30, r24
-    e812:	0c 94 60 75 	jmp	0xeac0	; 0xeac0 <__tablejump2__>
+    e7d4:	89 81       	ldd	r24, Y+1	; 0x01
+    e7d6:	88 2f       	mov	r24, r24
+    e7d8:	90 e0       	ldi	r25, 0x00	; 0
+    e7da:	09 2e       	mov	r0, r25
+    e7dc:	00 0c       	add	r0, r0
+    e7de:	aa 0b       	sbc	r26, r26
+    e7e0:	bb 0b       	sbc	r27, r27
+    e7e2:	42 e4       	ldi	r20, 0x42	; 66
+    e7e4:	50 e0       	ldi	r21, 0x00	; 0
+    e7e6:	21 e3       	ldi	r18, 0x31	; 49
+    e7e8:	30 e0       	ldi	r19, 0x00	; 0
+    e7ea:	84 1b       	sub	r24, r20
+    e7ec:	95 0b       	sbc	r25, r21
+    e7ee:	28 17       	cp	r18, r24
+    e7f0:	39 07       	cpc	r19, r25
+    e7f2:	70 f3       	brcs	.-36     	; 0xe7d0 <main+0x2a>
+    e7f4:	82 5c       	subi	r24, 0xC2	; 194
+    e7f6:	9f 48       	sbci	r25, 0x8F	; 143
+    e7f8:	fc 01       	movw	r30, r24
+    e7fa:	0c 94 6f 75 	jmp	0xeade	; 0xeade <__tablejump2__>
 		{
 			// Read Lock Bits
 			case 'r':
 				RS232_Transmit_Char(boot_lock_fuse_bits_get(GET_LOCK_BITS));
-    e816:	29 e0       	ldi	r18, 0x09	; 9
-    e818:	81 e0       	ldi	r24, 0x01	; 1
-    e81a:	90 e0       	ldi	r25, 0x00	; 0
-    e81c:	fc 01       	movw	r30, r24
-    e81e:	20 93 57 00 	sts	0x0057, r18
-    e822:	84 91       	lpm	r24, Z
-    e824:	8c 83       	std	Y+4, r24	; 0x04
-    e826:	8c 81       	ldd	r24, Y+4	; 0x04
-    e828:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    e7fe:	29 e0       	ldi	r18, 0x09	; 9
+    e800:	81 e0       	ldi	r24, 0x01	; 1
+    e802:	90 e0       	ldi	r25, 0x00	; 0
+    e804:	fc 01       	movw	r30, r24
+    e806:	20 93 57 00 	sts	0x0057, r18
+    e80a:	84 91       	lpm	r24, Z
+    e80c:	8d 83       	std	Y+5, r24	; 0x05
+    e80e:	8d 81       	ldd	r24, Y+5	; 0x05
+    e810:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 				RS232_Transmit_Char_CR();
-    e82c:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    e814:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 				break;
-    e830:	46 c1       	rjmp	.+652    	; 0xeabe <main+0x2fe>
+    e818:	61 c1       	rjmp	.+706    	; 0xeadc <main+0x336>
 			// Chip Erase
 			case 'e':
 				// P¯ijme 1 Byte, kter˝ rozhodne jestli EEPROM, Flash, nebo oboje
 				ID_Data = RS232_Receive_Char();
-    e832:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
-    e836:	89 83       	std	Y+1, r24	; 0x01
+    e81a:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
+    e81e:	89 83       	std	Y+1, r24	; 0x01
 				
 				//#warning "Pouze Simulator"
 				//ID_Data = 'F';
 				// Chceme Flash nebo EEProm Vymazat
 				switch(ID_Data)
-    e838:	89 81       	ldd	r24, Y+1	; 0x01
-    e83a:	88 2f       	mov	r24, r24
-    e83c:	90 e0       	ldi	r25, 0x00	; 0
-    e83e:	85 34       	cpi	r24, 0x45	; 69
-    e840:	91 05       	cpc	r25, r1
-    e842:	79 f0       	breq	.+30     	; 0xe862 <main+0xa2>
-    e844:	86 34       	cpi	r24, 0x46	; 70
-    e846:	91 05       	cpc	r25, r1
-    e848:	21 f0       	breq	.+8      	; 0xe852 <main+0x92>
-    e84a:	81 34       	cpi	r24, 0x41	; 65
-    e84c:	91 05       	cpc	r25, r1
-    e84e:	89 f0       	breq	.+34     	; 0xe872 <main+0xb2>
-    e850:	1a c0       	rjmp	.+52     	; 0xe886 <main+0xc6>
+    e820:	89 81       	ldd	r24, Y+1	; 0x01
+    e822:	88 2f       	mov	r24, r24
+    e824:	90 e0       	ldi	r25, 0x00	; 0
+    e826:	85 34       	cpi	r24, 0x45	; 69
+    e828:	91 05       	cpc	r25, r1
+    e82a:	79 f0       	breq	.+30     	; 0xe84a <main+0xa4>
+    e82c:	86 34       	cpi	r24, 0x46	; 70
+    e82e:	91 05       	cpc	r25, r1
+    e830:	21 f0       	breq	.+8      	; 0xe83a <main+0x94>
+    e832:	81 34       	cpi	r24, 0x41	; 65
+    e834:	91 05       	cpc	r25, r1
+    e836:	89 f0       	breq	.+34     	; 0xe85a <main+0xb4>
+    e838:	1a c0       	rjmp	.+52     	; 0xe86e <main+0xc8>
 				{
 					case 'F':
 						ChipErase();
-    e852:	0e 94 1e 72 	call	0xe43c	; 0xe43c <ChipErase>
+    e83a:	0e 94 1e 72 	call	0xe43c	; 0xe43c <ChipErase>
 						RS232_Transmit_Char(ACK);
-    e856:	86 e0       	ldi	r24, 0x06	; 6
-    e858:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    e83e:	86 e0       	ldi	r24, 0x06	; 6
+    e840:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 						RS232_Transmit_Char_CR();
-    e85c:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    e844:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 						break;
-    e860:	18 c0       	rjmp	.+48     	; 0xe892 <main+0xd2>
+    e848:	18 c0       	rjmp	.+48     	; 0xe87a <main+0xd4>
 					case 'E':
 						EepromErase();
-    e862:	0e 94 51 72 	call	0xe4a2	; 0xe4a2 <EepromErase>
+    e84a:	0e 94 51 72 	call	0xe4a2	; 0xe4a2 <EepromErase>
 						RS232_Transmit_Char(ACK);
-    e866:	86 e0       	ldi	r24, 0x06	; 6
-    e868:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    e84e:	86 e0       	ldi	r24, 0x06	; 6
+    e850:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 						RS232_Transmit_Char_CR();
-    e86c:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    e854:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 						break; 
-    e870:	10 c0       	rjmp	.+32     	; 0xe892 <main+0xd2>
+    e858:	10 c0       	rjmp	.+32     	; 0xe87a <main+0xd4>
 					case 'A':
 						ChipErase();
-    e872:	0e 94 1e 72 	call	0xe43c	; 0xe43c <ChipErase>
+    e85a:	0e 94 1e 72 	call	0xe43c	; 0xe43c <ChipErase>
 						EepromErase();
-    e876:	0e 94 51 72 	call	0xe4a2	; 0xe4a2 <EepromErase>
+    e85e:	0e 94 51 72 	call	0xe4a2	; 0xe4a2 <EepromErase>
 						RS232_Transmit_Char(ACK);
-    e87a:	86 e0       	ldi	r24, 0x06	; 6
-    e87c:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    e862:	86 e0       	ldi	r24, 0x06	; 6
+    e864:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 						RS232_Transmit_Char_CR();
-    e880:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    e868:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 						break;
-    e884:	06 c0       	rjmp	.+12     	; 0xe892 <main+0xd2>
+    e86c:	06 c0       	rjmp	.+12     	; 0xe87a <main+0xd4>
 					default:
 						RS232_Transmit_Char(NAK);
-    e886:	85 e1       	ldi	r24, 0x15	; 21
-    e888:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    e86e:	85 e1       	ldi	r24, 0x15	; 21
+    e870:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 						RS232_Transmit_Char_CR();
-    e88c:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    e874:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 					break;
-    e890:	00 00       	nop
+    e878:	00 00       	nop
 				}
 				break;
-    e892:	15 c1       	rjmp	.+554    	; 0xeabe <main+0x2fe>
+    e87a:	30 c1       	rjmp	.+608    	; 0xeadc <main+0x336>
 			// Write Lock Bits
 			case 'l':
 				WriteLockBits();
-    e894:	0e 94 7e 72 	call	0xe4fc	; 0xe4fc <WriteLockBits>
+    e87c:	0e 94 7e 72 	call	0xe4fc	; 0xe4fc <WriteLockBits>
 				RS232_Transmit_Char(NAK);
-    e898:	85 e1       	ldi	r24, 0x15	; 21
-    e89a:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    e880:	85 e1       	ldi	r24, 0x15	; 21
+    e882:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 				RS232_Transmit_Char_CR();
-    e89e:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    e886:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 				break;
-    e8a2:	0d c1       	rjmp	.+538    	; 0xeabe <main+0x2fe>
+    e88a:	28 c1       	rjmp	.+592    	; 0xeadc <main+0x336>
 			//Read LOW FUSE
 			case 'F':
 				RS232_Transmit_Char(boot_lock_fuse_bits_get(GET_LOW_FUSE_BITS));
-    e8a4:	29 e0       	ldi	r18, 0x09	; 9
-    e8a6:	80 e0       	ldi	r24, 0x00	; 0
-    e8a8:	90 e0       	ldi	r25, 0x00	; 0
-    e8aa:	fc 01       	movw	r30, r24
-    e8ac:	20 93 57 00 	sts	0x0057, r18
-    e8b0:	84 91       	lpm	r24, Z
-    e8b2:	8d 83       	std	Y+5, r24	; 0x05
-    e8b4:	8d 81       	ldd	r24, Y+5	; 0x05
-    e8b6:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    e88c:	29 e0       	ldi	r18, 0x09	; 9
+    e88e:	80 e0       	ldi	r24, 0x00	; 0
+    e890:	90 e0       	ldi	r25, 0x00	; 0
+    e892:	fc 01       	movw	r30, r24
+    e894:	20 93 57 00 	sts	0x0057, r18
+    e898:	84 91       	lpm	r24, Z
+    e89a:	8e 83       	std	Y+6, r24	; 0x06
+    e89c:	8e 81       	ldd	r24, Y+6	; 0x06
+    e89e:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 				RS232_Transmit_Char_CR();
-    e8ba:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    e8a2:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 				break;
-    e8be:	ff c0       	rjmp	.+510    	; 0xeabe <main+0x2fe>
+    e8a6:	1a c1       	rjmp	.+564    	; 0xeadc <main+0x336>
 			//Read High FUSE
 			case 'N':
 				RS232_Transmit_Char(boot_lock_fuse_bits_get(GET_HIGH_FUSE_BITS));
-    e8c0:	29 e0       	ldi	r18, 0x09	; 9
-    e8c2:	83 e0       	ldi	r24, 0x03	; 3
-    e8c4:	90 e0       	ldi	r25, 0x00	; 0
-    e8c6:	fc 01       	movw	r30, r24
-    e8c8:	20 93 57 00 	sts	0x0057, r18
-    e8cc:	84 91       	lpm	r24, Z
-    e8ce:	8e 83       	std	Y+6, r24	; 0x06
-    e8d0:	8e 81       	ldd	r24, Y+6	; 0x06
-    e8d2:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    e8a8:	29 e0       	ldi	r18, 0x09	; 9
+    e8aa:	83 e0       	ldi	r24, 0x03	; 3
+    e8ac:	90 e0       	ldi	r25, 0x00	; 0
+    e8ae:	fc 01       	movw	r30, r24
+    e8b0:	20 93 57 00 	sts	0x0057, r18
+    e8b4:	84 91       	lpm	r24, Z
+    e8b6:	8f 83       	std	Y+7, r24	; 0x07
+    e8b8:	8f 81       	ldd	r24, Y+7	; 0x07
+    e8ba:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 				RS232_Transmit_Char_CR();
-    e8d6:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    e8be:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 				break;
-    e8da:	f1 c0       	rjmp	.+482    	; 0xeabe <main+0x2fe>
+    e8c2:	0c c1       	rjmp	.+536    	; 0xeadc <main+0x336>
 			//Read Extended FUSE
 			case 'Q':
 				RS232_Transmit_Char(boot_lock_fuse_bits_get(GET_EXTENDED_FUSE_BITS));
-    e8dc:	29 e0       	ldi	r18, 0x09	; 9
-    e8de:	82 e0       	ldi	r24, 0x02	; 2
-    e8e0:	90 e0       	ldi	r25, 0x00	; 0
-    e8e2:	fc 01       	movw	r30, r24
-    e8e4:	20 93 57 00 	sts	0x0057, r18
-    e8e8:	84 91       	lpm	r24, Z
-    e8ea:	8f 83       	std	Y+7, r24	; 0x07
-    e8ec:	8f 81       	ldd	r24, Y+7	; 0x07
-    e8ee:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    e8c4:	29 e0       	ldi	r18, 0x09	; 9
+    e8c6:	82 e0       	ldi	r24, 0x02	; 2
+    e8c8:	90 e0       	ldi	r25, 0x00	; 0
+    e8ca:	fc 01       	movw	r30, r24
+    e8cc:	20 93 57 00 	sts	0x0057, r18
+    e8d0:	84 91       	lpm	r24, Z
+    e8d2:	88 87       	std	Y+8, r24	; 0x08
+    e8d4:	88 85       	ldd	r24, Y+8	; 0x08
+    e8d6:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 				RS232_Transmit_Char_CR();
-    e8f2:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    e8da:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 				break;	
-    e8f6:	e3 c0       	rjmp	.+454    	; 0xeabe <main+0x2fe>
+    e8de:	fe c0       	rjmp	.+508    	; 0xeadc <main+0x336>
 			//Read Signature
 			case 's':
 				RS232_Transmit_Char(boot_signature_byte_get(SIGNAT_BYTE_0));
-    e8f8:	21 e2       	ldi	r18, 0x21	; 33
-    e8fa:	80 e0       	ldi	r24, 0x00	; 0
-    e8fc:	90 e0       	ldi	r25, 0x00	; 0
-    e8fe:	fc 01       	movw	r30, r24
-    e900:	20 93 57 00 	sts	0x0057, r18
-    e904:	84 91       	lpm	r24, Z
-    e906:	88 87       	std	Y+8, r24	; 0x08
-    e908:	88 85       	ldd	r24, Y+8	; 0x08
-    e90a:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    e8e0:	21 e2       	ldi	r18, 0x21	; 33
+    e8e2:	80 e0       	ldi	r24, 0x00	; 0
+    e8e4:	90 e0       	ldi	r25, 0x00	; 0
+    e8e6:	fc 01       	movw	r30, r24
+    e8e8:	20 93 57 00 	sts	0x0057, r18
+    e8ec:	84 91       	lpm	r24, Z
+    e8ee:	89 87       	std	Y+9, r24	; 0x09
+    e8f0:	89 85       	ldd	r24, Y+9	; 0x09
+    e8f2:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 				RS232_Transmit_Char(boot_signature_byte_get(SIGNAT_BYTE_1));				
-    e90e:	21 e2       	ldi	r18, 0x21	; 33
-    e910:	82 e0       	ldi	r24, 0x02	; 2
-    e912:	90 e0       	ldi	r25, 0x00	; 0
-    e914:	fc 01       	movw	r30, r24
-    e916:	20 93 57 00 	sts	0x0057, r18
-    e91a:	84 91       	lpm	r24, Z
-    e91c:	89 87       	std	Y+9, r24	; 0x09
-    e91e:	89 85       	ldd	r24, Y+9	; 0x09
-    e920:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    e8f6:	21 e2       	ldi	r18, 0x21	; 33
+    e8f8:	82 e0       	ldi	r24, 0x02	; 2
+    e8fa:	90 e0       	ldi	r25, 0x00	; 0
+    e8fc:	fc 01       	movw	r30, r24
+    e8fe:	20 93 57 00 	sts	0x0057, r18
+    e902:	84 91       	lpm	r24, Z
+    e904:	8a 87       	std	Y+10, r24	; 0x0a
+    e906:	8a 85       	ldd	r24, Y+10	; 0x0a
+    e908:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 				RS232_Transmit_Char(boot_signature_byte_get(SIGNAT_BYTE_2));				
-    e924:	21 e2       	ldi	r18, 0x21	; 33
-    e926:	84 e0       	ldi	r24, 0x04	; 4
-    e928:	90 e0       	ldi	r25, 0x00	; 0
-    e92a:	fc 01       	movw	r30, r24
-    e92c:	20 93 57 00 	sts	0x0057, r18
-    e930:	84 91       	lpm	r24, Z
-    e932:	8a 87       	std	Y+10, r24	; 0x0a
-    e934:	8a 85       	ldd	r24, Y+10	; 0x0a
-    e936:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    e90c:	21 e2       	ldi	r18, 0x21	; 33
+    e90e:	84 e0       	ldi	r24, 0x04	; 4
+    e910:	90 e0       	ldi	r25, 0x00	; 0
+    e912:	fc 01       	movw	r30, r24
+    e914:	20 93 57 00 	sts	0x0057, r18
+    e918:	84 91       	lpm	r24, Z
+    e91a:	8b 87       	std	Y+11, r24	; 0x0b
+    e91c:	8b 85       	ldd	r24, Y+11	; 0x0b
+    e91e:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 				RS232_Transmit_Char_CR();
-    e93a:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    e922:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 				break;
-    e93e:	bf c0       	rjmp	.+382    	; 0xeabe <main+0x2fe>
+    e926:	da c0       	rjmp	.+436    	; 0xeadc <main+0x336>
 			// Return Software Identifier
 			case 'S':
 				RS232_Transmit_String("VA000001");
-    e940:	8c e1       	ldi	r24, 0x1C	; 28
-    e942:	91 e0       	ldi	r25, 0x01	; 1
-    e944:	0e 94 f7 71 	call	0xe3ee	; 0xe3ee <RS232_Transmit_String>
+    e928:	8c e1       	ldi	r24, 0x1C	; 28
+    e92a:	91 e0       	ldi	r25, 0x01	; 1
+    e92c:	0e 94 f7 71 	call	0xe3ee	; 0xe3ee <RS232_Transmit_String>
 				RS232_Transmit_Char_CR();
-    e948:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    e930:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 				break;
-    e94c:	b8 c0       	rjmp	.+368    	; 0xeabe <main+0x2fe>
+    e934:	d3 c0       	rjmp	.+422    	; 0xeadc <main+0x336>
 			// Return Software Version
 			case 'V':
 				RS232_Transmit_String(BOOTLOADER_VERSION);
-    e94e:	85 e2       	ldi	r24, 0x25	; 37
-    e950:	91 e0       	ldi	r25, 0x01	; 1
-    e952:	0e 94 f7 71 	call	0xe3ee	; 0xe3ee <RS232_Transmit_String>
+    e936:	85 e2       	ldi	r24, 0x25	; 37
+    e938:	91 e0       	ldi	r25, 0x01	; 1
+    e93a:	0e 94 f7 71 	call	0xe3ee	; 0xe3ee <RS232_Transmit_String>
 				RS232_Transmit_Char_CR();
-    e956:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    e93e:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 				break;
-    e95a:	b1 c0       	rjmp	.+354    	; 0xeabe <main+0x2fe>
+    e942:	cc c0       	rjmp	.+408    	; 0xeadc <main+0x336>
 			// Exit from Bootloader
 			case 'E':
 				RS232_Transmit_String("Exit from BOOTLOADER. BYE");
-    e95c:	88 e2       	ldi	r24, 0x28	; 40
-    e95e:	91 e0       	ldi	r25, 0x01	; 1
-    e960:	0e 94 f7 71 	call	0xe3ee	; 0xe3ee <RS232_Transmit_String>
+    e944:	88 e2       	ldi	r24, 0x28	; 40
+    e946:	91 e0       	ldi	r25, 0x01	; 1
+    e948:	0e 94 f7 71 	call	0xe3ee	; 0xe3ee <RS232_Transmit_String>
 				RS232_Transmit_Char_CR();
-    e964:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    e94c:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 				jumpaddress();
-    e968:	0e 94 15 72 	call	0xe42a	; 0xe42a <jumpaddress>
+    e950:	0e 94 15 72 	call	0xe42a	; 0xe42a <jumpaddress>
 				break;
-    e96c:	a8 c0       	rjmp	.+336    	; 0xeabe <main+0x2fe>
+    e954:	c3 c0       	rjmp	.+390    	; 0xeadc <main+0x336>
 			// Check Block Support (Vytvo¯enÌ Verify pamÏti)
 			case 'b':
 				VerifyFlash();
-    e96e:	0e 94 0f 71 	call	0xe21e	; 0xe21e <VerifyFlash>
+    e956:	0e 94 0f 71 	call	0xe21e	; 0xe21e <VerifyFlash>
 				break;
-    e972:	a5 c0       	rjmp	.+330    	; 0xeabe <main+0x2fe>
+    e95a:	c0 c0       	rjmp	.+384    	; 0xeadc <main+0x336>
 			// Write Data into Flash memory with specific Address
 			case 'B':
 				// P¯ijme 1 Byte, kter˝ rozhodne jestli 
 				ID_Data = RS232_Receive_Char();
-    e974:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
-    e978:	89 83       	std	Y+1, r24	; 0x01
+    e95c:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
+    e960:	89 83       	std	Y+1, r24	; 0x01
 				address = RS232_Receive_Char() << 8;
-    e97a:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
-    e97e:	88 2f       	mov	r24, r24
-    e980:	90 e0       	ldi	r25, 0x00	; 0
-    e982:	98 2f       	mov	r25, r24
-    e984:	88 27       	eor	r24, r24
-    e986:	9b 83       	std	Y+3, r25	; 0x03
-    e988:	8a 83       	std	Y+2, r24	; 0x02
+    e962:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
+    e966:	88 2f       	mov	r24, r24
+    e968:	90 e0       	ldi	r25, 0x00	; 0
+    e96a:	98 2f       	mov	r25, r24
+    e96c:	88 27       	eor	r24, r24
+    e96e:	9b 83       	std	Y+3, r25	; 0x03
+    e970:	8a 83       	std	Y+2, r24	; 0x02
 				address |= RS232_Receive_Char();
-    e98a:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
-    e98e:	88 2f       	mov	r24, r24
-    e990:	90 e0       	ldi	r25, 0x00	; 0
-    e992:	2a 81       	ldd	r18, Y+2	; 0x02
-    e994:	3b 81       	ldd	r19, Y+3	; 0x03
-    e996:	82 2b       	or	r24, r18
-    e998:	93 2b       	or	r25, r19
-    e99a:	9b 83       	std	Y+3, r25	; 0x03
-    e99c:	8a 83       	std	Y+2, r24	; 0x02
+    e972:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
+    e976:	88 2f       	mov	r24, r24
+    e978:	90 e0       	ldi	r25, 0x00	; 0
+    e97a:	2a 81       	ldd	r18, Y+2	; 0x02
+    e97c:	3b 81       	ldd	r19, Y+3	; 0x03
+    e97e:	82 2b       	or	r24, r18
+    e980:	93 2b       	or	r25, r19
+    e982:	9b 83       	std	Y+3, r25	; 0x03
+    e984:	8a 83       	std	Y+2, r24	; 0x02
 				// Chceme Flash nebo EEProm naplnit daty
 				switch(ID_Data)
-    e99e:	89 81       	ldd	r24, Y+1	; 0x01
-    e9a0:	88 2f       	mov	r24, r24
-    e9a2:	90 e0       	ldi	r25, 0x00	; 0
-    e9a4:	85 34       	cpi	r24, 0x45	; 69
-    e9a6:	91 05       	cpc	r25, r1
-    e9a8:	e1 f1       	breq	.+120    	; 0xea22 <main+0x262>
-    e9aa:	86 34       	cpi	r24, 0x46	; 70
-    e9ac:	91 05       	cpc	r25, r1
-    e9ae:	09 f0       	breq	.+2      	; 0xe9b2 <main+0x1f2>
+    e986:	89 81       	ldd	r24, Y+1	; 0x01
+    e988:	88 2f       	mov	r24, r24
+    e98a:	90 e0       	ldi	r25, 0x00	; 0
+    e98c:	85 34       	cpi	r24, 0x45	; 69
+    e98e:	91 05       	cpc	r25, r1
+    e990:	e1 f1       	breq	.+120    	; 0xea0a <main+0x264>
+    e992:	86 34       	cpi	r24, 0x46	; 70
+    e994:	91 05       	cpc	r25, r1
+    e996:	09 f0       	breq	.+2      	; 0xe99a <main+0x1f4>
 							RS232_Transmit_Char(ACK);
 							RS232_Transmit_Char_CR();
 						}
 						break;
 				}
 				break;
-    e9b0:	86 c0       	rjmp	.+268    	; 0xeabe <main+0x2fe>
+    e998:	a1 c0       	rjmp	.+322    	; 0xeadc <main+0x336>
 				switch(ID_Data)
 				{
 					// »·st pro naprogramov·nÌ FLASH
 					case 'F':
 						// ZaplnÌ buffer o velikosti 1 str·nky			
 						for (cnt = 0; cnt <= SPM_PAGESIZE; cnt++)
-    e9b2:	10 92 43 02 	sts	0x0243, r1
-    e9b6:	10 92 42 02 	sts	0x0242, r1
-    e9ba:	15 c0       	rjmp	.+42     	; 0xe9e6 <main+0x226>
+    e99a:	10 92 43 02 	sts	0x0243, r1
+    e99e:	10 92 42 02 	sts	0x0242, r1
+    e9a2:	15 c0       	rjmp	.+42     	; 0xe9ce <main+0x228>
 						{
 							BufferFlash[cnt] = RS232_Receive_Char();
-    e9bc:	00 91 42 02 	lds	r16, 0x0242
-    e9c0:	10 91 43 02 	lds	r17, 0x0243
-    e9c4:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
-    e9c8:	28 2f       	mov	r18, r24
-    e9ca:	c8 01       	movw	r24, r16
-    e9cc:	8e 5b       	subi	r24, 0xBE	; 190
-    e9ce:	9e 4f       	sbci	r25, 0xFE	; 254
-    e9d0:	fc 01       	movw	r30, r24
-    e9d2:	20 83       	st	Z, r18
+    e9a4:	00 91 42 02 	lds	r16, 0x0242
+    e9a8:	10 91 43 02 	lds	r17, 0x0243
+    e9ac:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
+    e9b0:	28 2f       	mov	r18, r24
+    e9b2:	c8 01       	movw	r24, r16
+    e9b4:	8e 5b       	subi	r24, 0xBE	; 190
+    e9b6:	9e 4f       	sbci	r25, 0xFE	; 254
+    e9b8:	fc 01       	movw	r30, r24
+    e9ba:	20 83       	st	Z, r18
 				switch(ID_Data)
 				{
 					// »·st pro naprogramov·nÌ FLASH
 					case 'F':
 						// ZaplnÌ buffer o velikosti 1 str·nky			
 						for (cnt = 0; cnt <= SPM_PAGESIZE; cnt++)
-    e9d4:	80 91 42 02 	lds	r24, 0x0242
-    e9d8:	90 91 43 02 	lds	r25, 0x0243
-    e9dc:	01 96       	adiw	r24, 0x01	; 1
-    e9de:	90 93 43 02 	sts	0x0243, r25
-    e9e2:	80 93 42 02 	sts	0x0242, r24
-    e9e6:	80 91 42 02 	lds	r24, 0x0242
-    e9ea:	90 91 43 02 	lds	r25, 0x0243
-    e9ee:	81 30       	cpi	r24, 0x01	; 1
-    e9f0:	91 40       	sbci	r25, 0x01	; 1
-    e9f2:	20 f3       	brcs	.-56     	; 0xe9bc <main+0x1fc>
+    e9bc:	80 91 42 02 	lds	r24, 0x0242
+    e9c0:	90 91 43 02 	lds	r25, 0x0243
+    e9c4:	01 96       	adiw	r24, 0x01	; 1
+    e9c6:	90 93 43 02 	sts	0x0243, r25
+    e9ca:	80 93 42 02 	sts	0x0242, r24
+    e9ce:	80 91 42 02 	lds	r24, 0x0242
+    e9d2:	90 91 43 02 	lds	r25, 0x0243
+    e9d6:	81 30       	cpi	r24, 0x01	; 1
+    e9d8:	91 40       	sbci	r25, 0x01	; 1
+    e9da:	20 f3       	brcs	.-56     	; 0xe9a4 <main+0x1fe>
 						{
 							BufferFlash[cnt] = RS232_Receive_Char();
 						}
 						if (address > (END_APP_ADDRESS - 256))
-    e9f4:	8a 81       	ldd	r24, Y+2	; 0x02
-    e9f6:	9b 81       	ldd	r25, Y+3	; 0x03
-    e9f8:	81 15       	cp	r24, r1
-    e9fa:	9f 46       	sbci	r25, 0x6F	; 111
-    e9fc:	30 f0       	brcs	.+12     	; 0xea0a <main+0x24a>
+    e9dc:	8a 81       	ldd	r24, Y+2	; 0x02
+    e9de:	9b 81       	ldd	r25, Y+3	; 0x03
+    e9e0:	81 15       	cp	r24, r1
+    e9e2:	9f 46       	sbci	r25, 0x6F	; 111
+    e9e4:	30 f0       	brcs	.+12     	; 0xe9f2 <main+0x24c>
 						{
 							RS232_Transmit_Char(NAK);
-    e9fe:	85 e1       	ldi	r24, 0x15	; 21
-    ea00:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    e9e6:	85 e1       	ldi	r24, 0x15	; 21
+    e9e8:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 							RS232_Transmit_Char_CR();
-    ea04:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    e9ec:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 						{
 							WriteFlashPages(address, BufferFlash);
 							RS232_Transmit_Char(ACK);
 							RS232_Transmit_Char_CR();
 						}
 						break;
-    ea08:	43 c0       	rjmp	.+134    	; 0xea90 <main+0x2d0>
+    e9f0:	43 c0       	rjmp	.+134    	; 0xea78 <main+0x2d2>
 							RS232_Transmit_Char(NAK);
 							RS232_Transmit_Char_CR();
 						} 
 						else
 						{
 							WriteFlashPages(address, BufferFlash);
-    ea0a:	8a 81       	ldd	r24, Y+2	; 0x02
-    ea0c:	9b 81       	ldd	r25, Y+3	; 0x03
-    ea0e:	62 e4       	ldi	r22, 0x42	; 66
-    ea10:	71 e0       	ldi	r23, 0x01	; 1
-    ea12:	0e 94 85 72 	call	0xe50a	; 0xe50a <WriteFlashPages>
+    e9f2:	8a 81       	ldd	r24, Y+2	; 0x02
+    e9f4:	9b 81       	ldd	r25, Y+3	; 0x03
+    e9f6:	62 e4       	ldi	r22, 0x42	; 66
+    e9f8:	71 e0       	ldi	r23, 0x01	; 1
+    e9fa:	0e 94 85 72 	call	0xe50a	; 0xe50a <WriteFlashPages>
 							RS232_Transmit_Char(ACK);
-    ea16:	86 e0       	ldi	r24, 0x06	; 6
-    ea18:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    e9fe:	86 e0       	ldi	r24, 0x06	; 6
+    ea00:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 							RS232_Transmit_Char_CR();
-    ea1c:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    ea04:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 						}
 						break;
-    ea20:	37 c0       	rjmp	.+110    	; 0xea90 <main+0x2d0>
+    ea08:	37 c0       	rjmp	.+110    	; 0xea78 <main+0x2d2>
 					// »·st pro naprogramov·nÌ EEPROM
 					case 'E':
 						for (cnt = 0; cnt < PAGE_SIZE_EEPROM; cnt++)
-    ea22:	10 92 43 02 	sts	0x0243, r1
-    ea26:	10 92 42 02 	sts	0x0242, r1
-    ea2a:	15 c0       	rjmp	.+42     	; 0xea56 <main+0x296>
+    ea0a:	10 92 43 02 	sts	0x0243, r1
+    ea0e:	10 92 42 02 	sts	0x0242, r1
+    ea12:	15 c0       	rjmp	.+42     	; 0xea3e <main+0x298>
 						{
 							//BufferEeprom[cnt] = cnt;
 							BufferEeprom[cnt] = RS232_Receive_Char();
-    ea2c:	00 91 42 02 	lds	r16, 0x0242
-    ea30:	10 91 43 02 	lds	r17, 0x0243
-    ea34:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
-    ea38:	28 2f       	mov	r18, r24
-    ea3a:	c8 01       	movw	r24, r16
-    ea3c:	80 50       	subi	r24, 0x00	; 0
-    ea3e:	9f 4f       	sbci	r25, 0xFF	; 255
-    ea40:	fc 01       	movw	r30, r24
-    ea42:	20 83       	st	Z, r18
+    ea14:	00 91 42 02 	lds	r16, 0x0242
+    ea18:	10 91 43 02 	lds	r17, 0x0243
+    ea1c:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
+    ea20:	28 2f       	mov	r18, r24
+    ea22:	c8 01       	movw	r24, r16
+    ea24:	80 50       	subi	r24, 0x00	; 0
+    ea26:	9f 4f       	sbci	r25, 0xFF	; 255
+    ea28:	fc 01       	movw	r30, r24
+    ea2a:	20 83       	st	Z, r18
 							RS232_Transmit_Char_CR();
 						}
 						break;
 					// »·st pro naprogramov·nÌ EEPROM
 					case 'E':
 						for (cnt = 0; cnt < PAGE_SIZE_EEPROM; cnt++)
-    ea44:	80 91 42 02 	lds	r24, 0x0242
-    ea48:	90 91 43 02 	lds	r25, 0x0243
-    ea4c:	01 96       	adiw	r24, 0x01	; 1
-    ea4e:	90 93 43 02 	sts	0x0243, r25
-    ea52:	80 93 42 02 	sts	0x0242, r24
-    ea56:	80 91 42 02 	lds	r24, 0x0242
-    ea5a:	90 91 43 02 	lds	r25, 0x0243
-    ea5e:	08 97       	sbiw	r24, 0x08	; 8
-    ea60:	28 f3       	brcs	.-54     	; 0xea2c <main+0x26c>
+    ea2c:	80 91 42 02 	lds	r24, 0x0242
+    ea30:	90 91 43 02 	lds	r25, 0x0243
+    ea34:	01 96       	adiw	r24, 0x01	; 1
+    ea36:	90 93 43 02 	sts	0x0243, r25
+    ea3a:	80 93 42 02 	sts	0x0242, r24
+    ea3e:	80 91 42 02 	lds	r24, 0x0242
+    ea42:	90 91 43 02 	lds	r25, 0x0243
+    ea46:	08 97       	sbiw	r24, 0x08	; 8
+    ea48:	28 f3       	brcs	.-54     	; 0xea14 <main+0x26e>
 						{
 							//BufferEeprom[cnt] = cnt;
 							BufferEeprom[cnt] = RS232_Receive_Char();
 						}
 						if (address > (END_EEPROM_ADDRESS - 256))
-    ea62:	8a 81       	ldd	r24, Y+2	; 0x02
-    ea64:	9b 81       	ldd	r25, Y+3	; 0x03
-    ea66:	81 30       	cpi	r24, 0x01	; 1
-    ea68:	97 40       	sbci	r25, 0x07	; 7
-    ea6a:	30 f0       	brcs	.+12     	; 0xea78 <main+0x2b8>
+    ea4a:	8a 81       	ldd	r24, Y+2	; 0x02
+    ea4c:	9b 81       	ldd	r25, Y+3	; 0x03
+    ea4e:	81 30       	cpi	r24, 0x01	; 1
+    ea50:	97 40       	sbci	r25, 0x07	; 7
+    ea52:	30 f0       	brcs	.+12     	; 0xea60 <main+0x2ba>
 						{
 							RS232_Transmit_Char(NAK);
-    ea6c:	85 e1       	ldi	r24, 0x15	; 21
-    ea6e:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    ea54:	85 e1       	ldi	r24, 0x15	; 21
+    ea56:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 							RS232_Transmit_Char_CR();
-    ea72:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    ea5a:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 						{
 							WriteEepromPages(address, BufferEeprom);
 							RS232_Transmit_Char(ACK);
 							RS232_Transmit_Char_CR();
 						}
 						break;
-    ea76:	0b c0       	rjmp	.+22     	; 0xea8e <main+0x2ce>
+    ea5e:	0b c0       	rjmp	.+22     	; 0xea76 <main+0x2d0>
 							RS232_Transmit_Char(NAK);
 							RS232_Transmit_Char_CR();
 						}
 						else
 						{
 							WriteEepromPages(address, BufferEeprom);
-    ea78:	8a 81       	ldd	r24, Y+2	; 0x02
-    ea7a:	9b 81       	ldd	r25, Y+3	; 0x03
-    ea7c:	60 e0       	ldi	r22, 0x00	; 0
-    ea7e:	71 e0       	ldi	r23, 0x01	; 1
-    ea80:	0e 94 ec 72 	call	0xe5d8	; 0xe5d8 <WriteEepromPages>
+    ea60:	8a 81       	ldd	r24, Y+2	; 0x02
+    ea62:	9b 81       	ldd	r25, Y+3	; 0x03
+    ea64:	60 e0       	ldi	r22, 0x00	; 0
+    ea66:	71 e0       	ldi	r23, 0x01	; 1
+    ea68:	0e 94 ec 72 	call	0xe5d8	; 0xe5d8 <WriteEepromPages>
 							RS232_Transmit_Char(ACK);
-    ea84:	86 e0       	ldi	r24, 0x06	; 6
-    ea86:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
+    ea6c:	86 e0       	ldi	r24, 0x06	; 6
+    ea6e:	0e 94 97 71 	call	0xe32e	; 0xe32e <RS232_Transmit_Char>
 							RS232_Transmit_Char_CR();
-    ea8a:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
+    ea72:	0e 94 e0 71 	call	0xe3c0	; 0xe3c0 <RS232_Transmit_Char_CR>
 						}
 						break;
-    ea8e:	00 00       	nop
+    ea76:	00 00       	nop
 				}
 				break;
-    ea90:	16 c0       	rjmp	.+44     	; 0xeabe <main+0x2fe>
+    ea78:	31 c0       	rjmp	.+98     	; 0xeadc <main+0x336>
 			case 'g':
+				// P¯ijme 1 Byte, kter˝ rozhodne jestli 
 				ID_Data = RS232_Receive_Char();
-    ea92:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
-    ea96:	89 83       	std	Y+1, r24	; 0x01
-				switch(ID_Data)
-    ea98:	89 81       	ldd	r24, Y+1	; 0x01
+    ea7a:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
+    ea7e:	89 83       	std	Y+1, r24	; 0x01
+				all = RS232_Receive_Char();
+    ea80:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
+    ea84:	8c 83       	std	Y+4, r24	; 0x04
+				address = RS232_Receive_Char() << 8;
+    ea86:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
+    ea8a:	88 2f       	mov	r24, r24
+    ea8c:	90 e0       	ldi	r25, 0x00	; 0
+    ea8e:	98 2f       	mov	r25, r24
+    ea90:	88 27       	eor	r24, r24
+    ea92:	9b 83       	std	Y+3, r25	; 0x03
+    ea94:	8a 83       	std	Y+2, r24	; 0x02
+				address |= RS232_Receive_Char();
+    ea96:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
     ea9a:	88 2f       	mov	r24, r24
     ea9c:	90 e0       	ldi	r25, 0x00	; 0
-    ea9e:	85 34       	cpi	r24, 0x45	; 69
-    eaa0:	91 05       	cpc	r25, r1
-    eaa2:	49 f0       	breq	.+18     	; 0xeab6 <main+0x2f6>
-    eaa4:	86 34       	cpi	r24, 0x46	; 70
-    eaa6:	91 05       	cpc	r25, r1
-    eaa8:	09 f0       	breq	.+2      	; 0xeaac <main+0x2ec>
+    ea9e:	2a 81       	ldd	r18, Y+2	; 0x02
+    eaa0:	3b 81       	ldd	r19, Y+3	; 0x03
+    eaa2:	82 2b       	or	r24, r18
+    eaa4:	93 2b       	or	r25, r19
+    eaa6:	9b 83       	std	Y+3, r25	; 0x03
+    eaa8:	8a 83       	std	Y+2, r24	; 0x02
+				switch(ID_Data)
+    eaaa:	89 81       	ldd	r24, Y+1	; 0x01
+    eaac:	88 2f       	mov	r24, r24
+    eaae:	90 e0       	ldi	r25, 0x00	; 0
+    eab0:	85 34       	cpi	r24, 0x45	; 69
+    eab2:	91 05       	cpc	r25, r1
+    eab4:	59 f0       	breq	.+22     	; 0xeacc <main+0x326>
+    eab6:	86 34       	cpi	r24, 0x46	; 70
+    eab8:	91 05       	cpc	r25, r1
+    eaba:	09 f0       	breq	.+2      	; 0xeabe <main+0x318>
 						break;
 					case 'E':
-						ReadEepromPages();
+						ReadEepromPages(all, address);
 						break;
 				}
 				break;
-    eaaa:	08 c0       	rjmp	.+16     	; 0xeabc <main+0x2fc>
+    eabc:	0e c0       	rjmp	.+28     	; 0xeada <main+0x334>
+				address |= RS232_Receive_Char();
 				switch(ID_Data)
 				{
-Zde:
 					case 'F':
 						// P¯eËtenÌ celÈ pamÏti dle stavovÈho automatu
-						ReadFlashPages(RS232_Receive_Char());	
-    eaac:	0e 94 81 71 	call	0xe302	; 0xe302 <RS232_Receive_Char>
-    eab0:	0e 94 21 73 	call	0xe642	; 0xe642 <ReadFlashPages>
+						ReadFlashPages(all, address);	
+    eabe:	8a 81       	ldd	r24, Y+2	; 0x02
+    eac0:	9b 81       	ldd	r25, Y+3	; 0x03
+    eac2:	bc 01       	movw	r22, r24
+    eac4:	8c 81       	ldd	r24, Y+4	; 0x04
+    eac6:	0e 94 21 73 	call	0xe642	; 0xe642 <ReadFlashPages>
 						break;
-    eab4:	03 c0       	rjmp	.+6      	; 0xeabc <main+0x2fc>
+    eaca:	07 c0       	rjmp	.+14     	; 0xeada <main+0x334>
 					case 'E':
-						ReadEepromPages();
-    eab6:	0e 94 94 73 	call	0xe728	; 0xe728 <ReadEepromPages>
+						ReadEepromPages(all, address);
+    eacc:	8a 81       	ldd	r24, Y+2	; 0x02
+    eace:	9b 81       	ldd	r25, Y+3	; 0x03
+    ead0:	bc 01       	movw	r22, r24
+    ead2:	8c 81       	ldd	r24, Y+4	; 0x04
+    ead4:	0e 94 73 73 	call	0xe6e6	; 0xe6e6 <ReadEepromPages>
 						break;
-    eaba:	00 00       	nop
+    ead8:	00 00       	nop
 				}
 				break;
-    eabc:	00 00       	nop
+    eada:	00 00       	nop
 		}
     }
-    eabe:	94 ce       	rjmp	.-728    	; 0xe7e8 <main+0x28>
+    eadc:	79 ce       	rjmp	.-782    	; 0xe7d0 <main+0x2a>
 
-0000eac0 <__tablejump2__>:
-    eac0:	ee 0f       	add	r30, r30
-    eac2:	ff 1f       	adc	r31, r31
-    eac4:	05 90       	lpm	r0, Z+
-    eac6:	f4 91       	lpm	r31, Z
-    eac8:	e0 2d       	mov	r30, r0
-    eaca:	09 94       	ijmp
+0000eade <__tablejump2__>:
+    eade:	ee 0f       	add	r30, r30
+    eae0:	ff 1f       	adc	r31, r31
+    eae2:	05 90       	lpm	r0, Z+
+    eae4:	f4 91       	lpm	r31, Z
+    eae6:	e0 2d       	mov	r30, r0
+    eae8:	09 94       	ijmp
 
-0000eacc <eeprom_read_byte>:
-    eacc:	f9 99       	sbic	0x1f, 1	; 31
-    eace:	fe cf       	rjmp	.-4      	; 0xeacc <eeprom_read_byte>
-    ead0:	92 bd       	out	0x22, r25	; 34
-    ead2:	81 bd       	out	0x21, r24	; 33
-    ead4:	f8 9a       	sbi	0x1f, 0	; 31
-    ead6:	99 27       	eor	r25, r25
-    ead8:	80 b5       	in	r24, 0x20	; 32
-    eada:	08 95       	ret
+0000eaea <eeprom_read_byte>:
+    eaea:	f9 99       	sbic	0x1f, 1	; 31
+    eaec:	fe cf       	rjmp	.-4      	; 0xeaea <eeprom_read_byte>
+    eaee:	92 bd       	out	0x22, r25	; 34
+    eaf0:	81 bd       	out	0x21, r24	; 33
+    eaf2:	f8 9a       	sbi	0x1f, 0	; 31
+    eaf4:	99 27       	eor	r25, r25
+    eaf6:	80 b5       	in	r24, 0x20	; 32
+    eaf8:	08 95       	ret
 
-0000eadc <eeprom_update_byte>:
-    eadc:	26 2f       	mov	r18, r22
+0000eafa <eeprom_update_byte>:
+    eafa:	26 2f       	mov	r18, r22
 
-0000eade <eeprom_update_r18>:
-    eade:	f9 99       	sbic	0x1f, 1	; 31
-    eae0:	fe cf       	rjmp	.-4      	; 0xeade <eeprom_update_r18>
-    eae2:	92 bd       	out	0x22, r25	; 34
-    eae4:	81 bd       	out	0x21, r24	; 33
-    eae6:	f8 9a       	sbi	0x1f, 0	; 31
-    eae8:	01 97       	sbiw	r24, 0x01	; 1
-    eaea:	00 b4       	in	r0, 0x20	; 32
-    eaec:	02 16       	cp	r0, r18
-    eaee:	39 f0       	breq	.+14     	; 0xeafe <eeprom_update_r18+0x20>
-    eaf0:	1f ba       	out	0x1f, r1	; 31
-    eaf2:	20 bd       	out	0x20, r18	; 32
-    eaf4:	0f b6       	in	r0, 0x3f	; 63
-    eaf6:	f8 94       	cli
-    eaf8:	fa 9a       	sbi	0x1f, 2	; 31
-    eafa:	f9 9a       	sbi	0x1f, 1	; 31
-    eafc:	0f be       	out	0x3f, r0	; 63
-    eafe:	08 95       	ret
+0000eafc <eeprom_update_r18>:
+    eafc:	f9 99       	sbic	0x1f, 1	; 31
+    eafe:	fe cf       	rjmp	.-4      	; 0xeafc <eeprom_update_r18>
+    eb00:	92 bd       	out	0x22, r25	; 34
+    eb02:	81 bd       	out	0x21, r24	; 33
+    eb04:	f8 9a       	sbi	0x1f, 0	; 31
+    eb06:	01 97       	sbiw	r24, 0x01	; 1
+    eb08:	00 b4       	in	r0, 0x20	; 32
+    eb0a:	02 16       	cp	r0, r18
+    eb0c:	39 f0       	breq	.+14     	; 0xeb1c <eeprom_update_r18+0x20>
+    eb0e:	1f ba       	out	0x1f, r1	; 31
+    eb10:	20 bd       	out	0x20, r18	; 32
+    eb12:	0f b6       	in	r0, 0x3f	; 63
+    eb14:	f8 94       	cli
+    eb16:	fa 9a       	sbi	0x1f, 2	; 31
+    eb18:	f9 9a       	sbi	0x1f, 1	; 31
+    eb1a:	0f be       	out	0x3f, r0	; 63
+    eb1c:	08 95       	ret
 
-0000eb00 <_exit>:
-    eb00:	f8 94       	cli
+0000eb1e <_exit>:
+    eb1e:	f8 94       	cli
 
-0000eb02 <__stop_program>:
-    eb02:	ff cf       	rjmp	.-2      	; 0xeb02 <__stop_program>
+0000eb20 <__stop_program>:
+    eb20:	ff cf       	rjmp	.-2      	; 0xeb20 <__stop_program>

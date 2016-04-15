@@ -154,9 +154,9 @@ void WriteEepromPages(uint16_t address, uint8_t *Buffer)
 }
 
 // Ètení pamìti Flash
-void ReadFlashPages(uint8_t end)
+void ReadFlashPages(uint8_t end, uint16_t address)
 {
-	uint16_t First=0x0000, Last=0x0000, address=0x0000;
+	uint16_t First=0x0000, Last=0x0000;
 	uint16_t n=0;
 	
 	// Konec 0 - 0x0000 a konec aplikaèní èásti
@@ -165,56 +165,57 @@ void ReadFlashPages(uint8_t end)
 	
 	if (end == 0)
 	{
-		First = START_APP_ADDRESS;
+		address = START_APP_ADDRESS;
 		Last = END_APP_ADDRESS;
 	}
-	else if (end == 1)
-	{
-		First = START_BOOT_ADDRESS;
-		Last = END_ADDRESS;
-	}
-	else if(end == 2)
-	{
-		First = START_APP_ADDRESS;
-		Last = END_ADDRESS;
-	}
-	else
-	{
-		First = START_APP_ADDRESS;
-		Last = END_APP_ADDRESS;
-	}
+	
 	// Odeslání poèet Bytù kolik bude muset celkovì pøijmout
 	n = FLASH / NUM_O_PAGES;
 	RS232_Transmit_uint16(n);
-	address = First;
+	
 	while (address > Last)
 	{
 		RS232_Transmit_uint16(address);
 		for ( i = 0; i < SPM_PAGESIZE; i++)
 		{
 			RS232_Transmit_Char(pgm_read_byte(address + i));
+		}
+		if (end == 1)
+		{
+			break;
 		}
 		address += SPM_PAGESIZE;
 	}
 }
 
-void ReadEepromPages(void)
+void ReadEepromPages(uint8_t end, uint16_t address)
 {
-	uint16_t First=0x0000, Last=0x0000, address=0x0000;
+	uint16_t First=0x0000, Last=0x0000;
 	uint16_t n=0;
+	
+	if (end == 0)
+	{
+		address = START_EEPROM_ADDRESS;
+		Last = END_EEPROM_ADDRESS;
+	}
+	
 	
 	// Odeslání poèet Bytù kolik bude muset celkovì pøijmout
 	n = FLASH / NUM_O_PAGES;
 	RS232_Transmit_uint16(n);
-	address = First;
+	
 	while (address > Last)
 	{
 		RS232_Transmit_uint16(address);
-		for ( i = 0; i < SPM_PAGESIZE; i++)
+		for ( i = 0; i < PAGE_SIZE_EEPROM; i++)
 		{
-			RS232_Transmit_Char(pgm_read_byte(address + i));
+			RS232_Transmit_Char(eeprom_read_byte(address + i));
 		}
-		address += SPM_PAGESIZE;
+		if (end == 1)
+		{
+			break;
+		}
+		address += PAGE_SIZE_EEPROM;
 	}
 }
 
