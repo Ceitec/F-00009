@@ -11,7 +11,7 @@
 #include <avr/pgmspace.h>
 #include "RS232.h"
 
-const PROGMEM uint8_t crc_table[256] =
+const uint8_t crc_table[256] =
 {
 	0x00, 0x80, 0x97, 0x17, 0xb9, 0x39, 0x2e, 0xae, 0xe5, 0x65, 0x72, 0xf2, 0x5c, 0xdc, 0xcb, 0x4b,
 	0x5d, 0xdd, 0xca, 0x4a, 0xe4, 0x64, 0x73, 0xf3, 0xb8, 0x38, 0x2f, 0xaf, 0x01, 0x81, 0x96, 0x16,
@@ -30,7 +30,7 @@ const PROGMEM uint8_t crc_table[256] =
 	0x08, 0x88, 0x9f, 0x1f, 0xb1, 0x31, 0x26, 0xa6, 0xed, 0x6d, 0x7a, 0xfa, 0x54, 0xd4, 0xc3, 0x43,
 	0x55, 0xd5, 0xc2, 0x42, 0xec, 0x6c, 0x7b, 0xfb, 0xb0, 0x30, 0x27, 0xa7, 0x09, 0x89, 0x9e, 0x1e
 };
-
+/*
 #define MESSAGE_LEN 3
 
 int Haj(int argc, char **argv){
@@ -47,26 +47,29 @@ int Haj(int argc, char **argv){
 	//printf(" is 0x%02x\n",(~remainder)&0xff);
 	return 0;
 }
-
+*/
 // VerifyFlash
 void VerifyFlash(void)
 {
 	uint16_t i=0;
 	uint8_t remainder = 0;
 	uint8_t Data = 0;
-	uint8_t Address = 0;
-	while(Address > APP_SIZE)
+	uint16_t Address = 0;
+	while(Address < START_BOOT_ADDRESS_BYTES)
 	{
+		remainder = 0x00;
 		for (i = 0; i < SPM_PAGESIZE; i++)
 		{
-			Data = pgm_read_byte ( i );
-			remainder = ( crc_table[Data^remainder] ^ (remainder << 8) ) & 0xFF;
+			Data = pgm_read_byte ( Address + i );
+			remainder = (crc_table[Data^remainder] ^ (remainder << 8) ) & 0xFF;
 		}
-		RS232_Transmit_uint8(Address);
+		RS232_Transmit_uint16(Address);
 		RS232_Transmit_Char(~remainder);
 		RS232_Transmit_Char_CR();
 		Address+=SPM_PAGESIZE;
 	}
-	#warning "Pouze Simulator"
-	remainder;
+	RS232_Transmit_Char(ACK);
+	RS232_Transmit_Char_CR();
+	//#warning "Pouze Simulator"
+	//remainder;
 }

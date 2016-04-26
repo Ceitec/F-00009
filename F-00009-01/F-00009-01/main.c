@@ -8,12 +8,13 @@
 #include <avr/io.h>
 
 #include "inc/Define_Setup.h"
+#define	F_CPU	14745600UL
 #include "inc/AllInit.h"
 #include "inc/common_defs.h"
 #include "inc/RS232.h"
 #include <avr/boot.h>
 #include <avr/fuse.h>
-#define	F_CPU	14745600UL
+
 #include <util/delay.h>
 #include <avr/interrupt.h>
 #include <avr/pgmspace.h>
@@ -26,7 +27,9 @@
 /* Programovací pojistky se musí nastavit
 BOOTRSZ = 0
 BOOTSZ = "00"
-
+LOW FUSE BITS = 0xD7
+HIGH FUSE BITS = 0xD0
+EXTENDED FUSE BITS = 0xFC
 																		*/
 /************************************************************************/
 
@@ -38,8 +41,9 @@ BOOTSZ = "00"
 
 static uint8_t BufferFlash[SPM_PAGESIZE], BufferEeprom[PAGE_SIZE_EEPROM] ={0x01, 0x02, 0x03, 0x04};
 static uint16_t	cnt=0;
-static uint8_t	i=0;
+static uint16_t	i=0;
 static uint8_t	BootStatus=0;
+uint8_t SOFTWARE_IDENTIFIER[9]="VA000001";
 
 // Skoèení na adresu 0x0000
 void	jumpaddress(void)
@@ -50,9 +54,9 @@ void	jumpaddress(void)
 // První funkce, která zajistí odeslání informací
 void FirstFunction(void)
 {
-	//for (cnt = 0; cnt < 255; cnt++)
-	#warning "Pouze Simulator"
-	for (cnt = 0; cnt < 2; cnt++)
+	for (cnt = 0; cnt < 250; cnt++)
+	//#warning "Pouze Simulator"
+	//for (cnt = 0; cnt < 2; cnt++)
 	{
 		if (RS232_Receive_Status() == 'P')
 		{
@@ -63,8 +67,8 @@ void FirstFunction(void)
 		_delay_ms(1);
 	}
 	// Pouze pro pozici Testování simulátoru
-	#warning	"Pouze Simulator";
-	BootStatus = 1;
+	//#warning	"Pouze Simulator";
+	//BootStatus = 1;
 	
 	if(!BootStatus)
 	{
@@ -82,9 +86,9 @@ void ReadLockBits(void)
 void ChipErase(void)
 {
 	uint16_t	address = 0x0000, konec = 0x0000;
-	konec = END_APP_ADDRESS;
+	konec = END_APP_ADDRESS_BYTES;
 	// Maže od adresy 0x0000 po koneènou adresu Bootloaderu
-	while (konec > address)
+	while (address < konec)
 	{
 		// Vymaže pøíslušnou adresu
 		
@@ -99,7 +103,7 @@ void EepromErase(void)
 	uint16_t	address = 0x0000, konec = 0x0000;
 	konec = END_EEPROM_ADDRESS;
 	// Maže od adresy 0x0000 po koneènou adresu Bootloaderu
-	while (konec > address)
+	while (address < konec)
 	{
 		// Vymaže pøíslušnou adresu
 		if(eeprom_read_byte(address) != 0xFF)
@@ -129,7 +133,7 @@ void WriteFlashPages(uint16_t address, uint8_t	*Buffer)
 {
 	uint16_t i;
 	uint16_t Data=0;
-	for (i=0; i<=SPM_PAGESIZE; i+=2)
+	for (i = 0; i < SPM_PAGESIZE; i += 2)
 	{
 		Data = *Buffer++;
 		Data |= *Buffer++ << 8;
@@ -156,30 +160,26 @@ void WriteEepromPages(uint16_t address, uint8_t *Buffer)
 // Ètení pamìti Flash
 void ReadFlashPages(uint8_t end, uint16_t address)
 {
-	uint16_t First=0x0000, Last=0x0000;
-	uint16_t n=0;
+	uint16_t Last=0x0000;
 	
 	// Konec 0 - 0x0000 až konec aplikaèní èásti
 	// Konec 1 - Zaèátek Bootloader èásti až konec
 	// Konec 2 - Celá pamì
-	
 	if (end == 0)
 	{
-		address = START_APP_ADDRESS;
-		Last = END_APP_ADDRESS;
+		address = START_APP_ADDRESS_BYTES;
 	}
 	
-	// Odeslání poèet Bytù kolik bude muset celkovì pøijmout
-	n = FLASH / NUM_O_PAGES;
-	RS232_Transmit_uint16(n);
-	
-	while (address > Last)
+	Last = (START_BOOT_ADDRESS_BYTES - PAGE_SIZE);
+	while (address <= Last)
 	{
+		
 		RS232_Transmit_uint16(address);
 		for ( i = 0; i < SPM_PAGESIZE; i++)
 		{
 			RS232_Transmit_Char(pgm_read_byte(address + i));
 		}
+		RS232_Transmit_Char_CR();
 		if (end == 1)
 		{
 			break;
@@ -190,32 +190,27 @@ void ReadFlashPages(uint8_t end, uint16_t address)
 
 void ReadEepromPages(uint8_t end, uint16_t address)
 {
-	uint16_t First=0x0000, Last=0x0000;
-	uint16_t n=0;
+	uint16_t Last=0x0000;
 	
 	if (end == 0)
 	{
 		address = START_EEPROM_ADDRESS;
-		Last = END_EEPROM_ADDRESS;
 	}
+	Last = (END_EEPROM_ADDRESS - PAGE_SIZE_EEPROM);
 	
-	
-	// Odeslání poèet Bytù kolik bude muset celkovì pøijmout
-	n = FLASH / NUM_O_PAGES;
-	RS232_Transmit_uint16(n);
-	
-	while (address > Last)
+	while (address <= Last)
 	{
 		RS232_Transmit_uint16(address);
 		for ( i = 0; i < PAGE_SIZE_EEPROM; i++)
 		{
 			RS232_Transmit_Char(eeprom_read_byte(address + i));
 		}
+		RS232_Transmit_Char_CR();
 		if (end == 1)
 		{
 			break;
 		}
-		address += PAGE_SIZE_EEPROM;
+		address += E2PAGESIZE;
 	}
 }
 
@@ -232,20 +227,23 @@ int main(void)
 	cli();
 	RS232_Init(RS232_115200);
 	
-	//FirstFunction();
+	// Spuštìní režimu BOOTloaderu
+	
+	FirstFunction();
 	
     while (1) 
     {
 		
-		//ID_Data = RS232_Receive_Char();
-		#warning "Pouze Simulator"
-		ID_Data = 'g';
+		ID_Data = RS232_Receive_Char();
+		//#warning "Pouze Simulator"
+		//ID_Data = 'g';
 		
 		switch (ID_Data)
 		{
 			// Read Lock Bits
 			case 'r':
 				RS232_Transmit_Char(boot_lock_fuse_bits_get(GET_LOCK_BITS));
+				RS232_Transmit_Char(ACK);
 				RS232_Transmit_Char_CR();
 				break;
 			// Chip Erase
@@ -289,16 +287,19 @@ int main(void)
 			//Read LOW FUSE
 			case 'F':
 				RS232_Transmit_Char(boot_lock_fuse_bits_get(GET_LOW_FUSE_BITS));
+				RS232_Transmit_Char(ACK);
 				RS232_Transmit_Char_CR();
 				break;
 			//Read High FUSE
 			case 'N':
 				RS232_Transmit_Char(boot_lock_fuse_bits_get(GET_HIGH_FUSE_BITS));
+				RS232_Transmit_Char(ACK);
 				RS232_Transmit_Char_CR();
 				break;
 			//Read Extended FUSE
 			case 'Q':
 				RS232_Transmit_Char(boot_lock_fuse_bits_get(GET_EXTENDED_FUSE_BITS));
+				RS232_Transmit_Char(ACK);
 				RS232_Transmit_Char_CR();
 				break;	
 			//Read Signature
@@ -306,16 +307,19 @@ int main(void)
 				RS232_Transmit_Char(boot_signature_byte_get(SIGNAT_BYTE_0));
 				RS232_Transmit_Char(boot_signature_byte_get(SIGNAT_BYTE_1));				
 				RS232_Transmit_Char(boot_signature_byte_get(SIGNAT_BYTE_2));				
+				RS232_Transmit_Char(ACK);
 				RS232_Transmit_Char_CR();
 				break;
 			// Return Software Identifier
 			case 'S':
-				RS232_Transmit_String("VA000001");
+				RS232_Transmit_String(SOFTWARE_IDENTIFIER);
+				RS232_Transmit_Char(ACK);
 				RS232_Transmit_Char_CR();
 				break;
 			// Return Software Version
 			case 'V':
 				RS232_Transmit_String(BOOTLOADER_VERSION);
+				RS232_Transmit_Char(ACK);
 				RS232_Transmit_Char_CR();
 				break;
 			// Exit from Bootloader
@@ -339,20 +343,21 @@ int main(void)
 				{
 					// Èást pro naprogramování FLASH
 					case 'F':
-						// Zaplní buffer o velikosti 1 stránky			
-						for (cnt = 0; cnt <= SPM_PAGESIZE; cnt++)
+						// Zaplní buffer o velikosti 1 stránky
+						for (cnt = 0; cnt < SPM_PAGESIZE; cnt++)
 						{
 							BufferFlash[cnt] = RS232_Receive_Char();
 						}
-						if (address > (END_APP_ADDRESS - 256))
+						// Pokud je zvolená adresa vìtší jak 0xDF00 což pøi zápisu 1 stránky by jsme se dostali do Bootlaoder èásti, tak buffer zahodí a odešla NAK + CR
+						if (address <= (START_BOOT_ADDRESS_BYTES - PAGE_SIZE))
 						{
-							RS232_Transmit_Char(NAK);
+							WriteFlashPages(address, BufferFlash);
+							RS232_Transmit_Char(ACK);
 							RS232_Transmit_Char_CR();
 						} 
 						else
 						{
-							WriteFlashPages(address, BufferFlash);
-							RS232_Transmit_Char(ACK);
+							RS232_Transmit_Char(NAK);
 							RS232_Transmit_Char_CR();
 						}
 						break;
@@ -363,15 +368,15 @@ int main(void)
 							//BufferEeprom[cnt] = cnt;
 							BufferEeprom[cnt] = RS232_Receive_Char();
 						}
-						if (address > (END_EEPROM_ADDRESS - 256))
+						if (address <= (END_EEPROM_ADDRESS - PAGE_SIZE_EEPROM))
 						{
-							RS232_Transmit_Char(NAK);
+							WriteEepromPages(address, BufferEeprom);
+							RS232_Transmit_Char(ACK);
 							RS232_Transmit_Char_CR();
 						}
 						else
 						{
-							WriteEepromPages(address, BufferEeprom);
-							RS232_Transmit_Char(ACK);
+							RS232_Transmit_Char(NAK);
 							RS232_Transmit_Char_CR();
 						}
 						break;
@@ -380,21 +385,43 @@ int main(void)
 			case 'g':
 				// Pøijme 1 Byte, který rozhodne jestli 
 				ID_Data = RS232_Receive_Char();
-				all = RS232_Receive_Char();
 				address = RS232_Receive_Char() << 8;
 				address |= RS232_Receive_Char();
 				switch(ID_Data)
 				{
 					case 'F':
 						// Pøeètení celé pamìti dle stavového automatu
-						ReadFlashPages(all, address);	
+						all = RS232_Receive_Char();
+						if (address <= (START_BOOT_ADDRESS_BYTES - PAGE_SIZE))
+						{
+							ReadFlashPages(all, address);
+							RS232_Transmit_Char(ACK);
+							RS232_Transmit_Char_CR();
+						}
+						else
+						{
+							RS232_Transmit_Char(NAK);
+							RS232_Transmit_Char_CR();	
+						}
 						break;
 					case 'E':
-						ReadEepromPages(all, address);
+						all = RS232_Receive_Char();
+						if (address <= (START_EEPROM_ADDRESS - PAGE_SIZE_EEPROM))
+						{
+							ReadEepromPages(all, address);
+							RS232_Transmit_Char(ACK);
+							RS232_Transmit_Char_CR();
+						}
+						else
+						{
+							RS232_Transmit_Char(NAK);
+							RS232_Transmit_Char_CR();
+						}
 						break;
 				}
 				break;
 		}
     }
+	
 }
 

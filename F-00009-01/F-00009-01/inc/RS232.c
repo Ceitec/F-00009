@@ -44,7 +44,10 @@ uint8_t	RS232_Receive_Status(void)
 	{
 		return UDR0;
 	}
-	return 0;
+	else
+	{
+		return 0;
+	}
 }
 
 unsigned char RS232_Receive_Char( void )

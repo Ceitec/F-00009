@@ -33,6 +33,8 @@
 #define ONE_WORDS	2
 // Poèet slov pro velikost BOOTLOADER sekce 4096 (Datasheet str.290)
 #define	BOOT_WORDS	128
+// Poèet slov pro velikost BOOTLOADER sekce 4096 (Datasheet str.290)
+#define	BOOT_BYTES	256
 // Poèet PAGES (viz Datasheet 290) 256 PAGES
 #define	NUM_O_PAGES	256
 // Velikost celé FLASH pamìti 64kBytes
@@ -43,18 +45,24 @@
 #define	BOOT_SIZE	(BOOTLOADER / BOOT_WORDS)					// 32 Pages in BootLoader Section
 // Velikost APPLICATION PAGES (Applikaèních stránek) 224 PAGES
 #define APP_SIZE	(PAGE_SIZE - BOOT_SIZE)						// 224 Pages in Application Section
-
+// Address Flash in Words
 #define START_APP_ADDRESS	0x0000								// Start Address 0x0000
 #define	END_APP_ADDRESS		((APP_SIZE * BOOT_WORDS) - 1)		// Last address in Application in Words 0x6FFF
 #define	START_BOOT_ADDRESS	(APP_SIZE * BOOT_WORDS)				// First address BootLoader in Words - 0x7000
 #define END_ADDRESS			((PAGE_SIZE * BOOT_WORDS) - 1)		// Last address Flash in Words - 0x7FFF
 #define FLASH_SIZE			(PAGE_SIZE * BOOT_WORDS)			// Last address Flash in Words - 0x8000
+// Address Flash in Bytes
+#define START_APP_ADDRESS_BYTES		0x0000								// Start Address 0x0000
+#define	END_APP_ADDRESS_BYTES		((APP_SIZE * BOOT_BYTES) - 1)		// Last address in Application in Words 0xDFFF
+#define	START_BOOT_ADDRESS_BYTES	(APP_SIZE * BOOT_BYTES)				// First address BootLoader in Words - 0xE000
+#define END_ADDRESS_BYTES			((PAGE_SIZE * BOOT_BYTES) - 1)		// Last address Flash in Words - 0xFFFF
+#define FLASH_SIZE_BYTES			(PAGE_SIZE * BOOT_BYTES)			// Last address Flash in Words - 0x10000
 
+// Address EEPROM in Bytes
 #define START_EEPROM_ADDRESS 0x0000
 #define	END_EEPROM_ADDRESS	0x0800
 #define NUM_O_PAGES_EEPROM		256
-#define PAGE_SIZE_EEPROM		8
-
+#define PAGE_SIZE_EEPROM		256
 
 
 #define ACK	0x06
