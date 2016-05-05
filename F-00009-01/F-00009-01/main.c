@@ -13,7 +13,7 @@
 #include "inc/common_defs.h"
 #include "inc/RS232.h"
 #include <avr/boot.h>
-#include <avr/fuse.h>
+//#include <avr/fuse.h>
 
 #include <util/delay.h>
 #include <avr/interrupt.h>
