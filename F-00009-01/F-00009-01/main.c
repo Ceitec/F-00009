@@ -28,7 +28,7 @@
 BOOTRSZ = 0
 BOOTSZ = "00"
 LOW FUSE BITS = 0xD7
-HIGH FUSE BITS = 0xD0
+HIGH FUSE BITS = 0x90 / Stará verze s D0 bez Jtag
 EXTENDED FUSE BITS = 0xFC
 																		*/
 /************************************************************************/
